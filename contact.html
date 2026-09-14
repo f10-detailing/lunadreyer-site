@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get in touch | Luna Dreyer, Translator</title>
+<meta name="description" content="Tell Luna Dreyer what your power of attorney or document is for and which country it is going to. Enquiries are sent directly to mail@lunadreyer.com.au.">
+<link rel="canonical" href="https://lunadreyer.com.au/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="mark" href="index.html">Luna Dreyer<span>Translator</span></a>
+    <span class="langs">German, English, Spanish, Italian, Portuguese</span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="power-of-attorney-apostille-australia.html">Powers of attorney</a></li>
+    <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
+    <li><a href="heidelberg.html">Heidelberg</a></li>
+    <li><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a></li>
+    <li><a href="contact.html" aria-current="page">Get in touch</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Tell me what the document is, and where it is going.</h1>
+    <p>A few details are enough to start: what you need done, which country the document is for, and how to reach you. If I am not the right person for it, I will say so rather than take the work on.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+
+    <form id="enquiry-form" class="enquiry" autocomplete="on">
+      <div class="fields">
+      <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone <span class="opt">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="location">Your location</label>
+        <input id="location" name="location" type="text" required autocomplete="address-level2" placeholder="e.g. Melbourne, VIC">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="country">Country the document is going to</label>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>Choose a country</option>
+            <option>Italy</option>
+            <option>Germany</option>
+            <option>Spain</option>
+            <option>Portugal</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="purpose">What do you need it for</label>
+          <select id="purpose" name="purpose" required>
+            <option value="" disabled selected>Choose the closest match</option>
+            <option>Selling property</option>
+            <option>Buying property</option>
+            <option>Accepting or renouncing an inheritance</option>
+            <option>Banking, tax or a financial matter</option>
+            <option>Company or business matter</option>
+            <option>Court or legal representation</option>
+            <option>Not sure / other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Tell me more</label>
+        <textarea id="message" name="message" rows="6" required placeholder="What the document is, who is asking for it (a lawyer, notary, registry, bank), and your timeframe."></textarea>
+      </div>
+
+      <button type="submit" class="submit">Send enquiry</button>
+      </div>
+
+      <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+
+      <p class="note">This form sends directly to my inbox. If you would rather email straight away, write to <a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>.</p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="power-of-attorney-apostille-australia.html">Powers of attorney</a></li>
+      <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
+      <li><a href="heidelberg.html">Heidelberg</a></li>
+      <li><a href="avvocati.html">Per avvocati</a></li>
+    </ul>
+    Luna Dreyer, translator. German, English, Spanish, Italian, Portuguese.
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ACCESS_KEY = "REPLACE_WITH_WEB3FORMS_ACCESS_KEY";
+  var form = document.getElementById("enquiry-form");
+  var status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (form.botcheck.checked) return;
+
+    if (ACCESS_KEY === "REPLACE_WITH_WEB3FORMS_ACCESS_KEY") {
+      status.textContent = "The enquiry form is not fully set up yet — please email mail@lunadreyer.com.au directly for now.";
+      status.className = "form-status error";
+      status.hidden = false;
+      return;
+    }
+
+    var data = new FormData(form);
+    data.append("access_key", ACCESS_KEY);
+    data.append("subject", "New enquiry from lunadreyer.com.au");
+    data.append("from_name", "lunadreyer.com.au contact form");
+
+    var fieldsBox = form.querySelector(".fields");
+    var button = form.querySelector(".submit");
+    button.disabled = true;
+    button.textContent = "Sending…";
+    status.hidden = true;
+    status.textContent = "";
+    status.className = "form-status";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          form.reset();
+          fieldsBox.hidden = true;
+          status.textContent = "Thank you — your enquiry has been sent. I will reply by email.";
+          status.className = "form-status success";
+          status.hidden = false;
+        } else {
+          throw new Error(json.message || "Submission failed");
+        }
+      })
+      .catch(function () {
+        status.textContent = "Something went wrong sending this. Please email mail@lunadreyer.com.au directly.";
+        status.className = "form-status error";
+        status.hidden = false;
+      })
+      .finally(function () {
+        button.disabled = false;
+        button.textContent = "Send enquiry";
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
