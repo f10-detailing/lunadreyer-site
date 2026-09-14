@@ -129,7 +129,7 @@
 
 <script>
 (function () {
-  var ACCESS_KEY = "REPLACE_WITH_WEB3FORMS_ACCESS_KEY";
+  var ACCESS_KEY = "f109b614-c5ff-44ee-867f-0df1f5753f38";
   var form = document.getElementById("enquiry-form");
   var status = document.getElementById("form-status");
 
@@ -137,13 +137,6 @@
     e.preventDefault();
 
     if (form.botcheck.checked) return;
-
-    if (ACCESS_KEY === "f109b614-c5ff-44ee-867f-0df1f5753f38") {
-      status.textContent = "The enquiry form is not fully set up yet — please email mail@lunadreyer.com.au directly for now.";
-      status.className = "form-status error";
-      status.hidden = false;
-      return;
-    }
 
     var data = new FormData(form);
     data.append("access_key", ACCESS_KEY);
