@@ -144,4 +144,18 @@ padding-left:1rem;border-left:2px solid var(--rule)}
 .form-status.success{border-left-color:#3f7a4f}
 .form-status.error{border-left-color:#a5432f}
 
+/* Content figures (photos/scans within an article) */
+.figure{margin:2rem 0 0}
+.figure img{width:100%;height:auto;border:1px solid var(--rule);border-radius:2px;display:block}
+.figure figcaption{margin-top:.6rem;font-size:.8rem;color:var(--navy-soft)}
+
+/* Data tables within an article */
+.section table{width:100%;border-collapse:collapse;margin:1.75rem 0 0;font-size:.92rem}
+.section caption{text-align:left;font-size:.85rem;color:var(--navy-soft);margin-bottom:.6rem}
+.section th,.section td{text-align:left;padding:.65rem .9rem;border:1px solid var(--rule);vertical-align:top}
+.section th{background:var(--paper);color:var(--navy);font-weight:600}
+.section.alt th{background:var(--ivory)}
+.table-scroll{overflow-x:auto;margin-top:1.75rem}
+.table-scroll table{margin-top:0}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
