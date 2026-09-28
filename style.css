@@ -158,4 +158,13 @@ padding-left:1rem;border-left:2px solid var(--rule)}
 .table-scroll{overflow-x:auto;margin-top:1.75rem}
 .table-scroll table{margin-top:0}
 
+/* Homepage 3D hero (index.html only) */
+.hero-3d-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center}
+.hero-scene{width:100%;aspect-ratio:1/1;max-width:420px;justify-self:center;min-height:220px}
+.hero-scene canvas{display:block;width:100%!important;height:100%!important;touch-action:pan-y}
+@media(max-width:56rem){
+  .hero-3d-layout{grid-template-columns:1fr}
+  .hero-scene{order:-1;max-width:280px;margin:0 auto .5rem}
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
