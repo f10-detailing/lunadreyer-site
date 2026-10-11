@@ -1,16 +1,18 @@
-# Luna Dreyer
+# Luna Dreyer Translation
 
-> Heidelberg-trained translator and cross-border document specialist based in Australia. Works on powers of attorney, apostille processes, and legal or official translations for documents moving between Australia and Italy, Germany, Spain or Portugal.
+> Luna Dreyer Translation is an Australian translation and facilitation agency for legal documents in Europe, founded by Heidelberg-trained translator Luna Dreyer. Works on powers of attorney, apostille processes, business translation, localisation, transcreation, proofreading, subtitling, transcription, typesetting, language liaison and accompaniment. Languages: German, English, Spanish, Italian, Portuguese, Catalan, and through collaborators Greek (including Cypriot Greek), Maltese and French. Does not provide NAATI-certified translations.
 
 ## Pages
 
-- [Home](https://lunadreyer.com.au/): Overview of translation and document-liaison services for Australians dealing with European authorities.
+- [Home](https://lunadreyer.com.au/): Overview of the agency's translation and facilitation services for Australians dealing with European authorities.
+- [Services and pricing](https://lunadreyer.com.au/services.html): Ten services that do not require NAATI certification, with starting prices in AUD or a fixed quote.
+- [About](https://lunadreyer.com.au/about.html): The agency, its founder Luna Dreyer, and its language team.
 - [Power of attorney and apostille](https://lunadreyer.com.au/power-of-attorney-apostille-australia.html): How a power of attorney is drafted, translated, notarised and apostilled in Australia for use in Europe, in the correct order.
 - [Buying property in Italy from Australia](https://lunadreyer.com.au/buying-property-italy-from-australia.html): The documents and process for Australians buying Italian property remotely, including judicial auctions.
 - [Apostille in Australia](https://lunadreyer.com.au/apostille-australia.html): DFAT apostille process, fees, timeframes and which countries accept an Australian apostille.
 - [Power of attorney for property in Greece](https://lunadreyer.com.au/power-of-attorney-property-greece.html): Why non-resident owners use a power of attorney for buying, managing, tax representation and document handling for Greek property.
-- [Heidelberg](https://lunadreyer.com.au/heidelberg.html): Background on the translator's training at Heidelberg University and why it matters for legal translation.
-- [Translation services](https://lunadreyer.com.au/translation-services.html): Document translation between Spanish and English, and into English from German, Italian, Portuguese and Catalan.
+- [Heidelberg](https://lunadreyer.com.au/heidelberg.html): Background on the founder's training at Heidelberg University and why it matters for legal translation.
+- [Document translation](https://lunadreyer.com.au/translation-services.html): Document translation between Spanish and English, into English from German, Italian, Portuguese and Catalan, and Greek, Maltese and French through collaborators.
 - [Per avvocati](https://lunadreyer.com.au/avvocati.html): Information in Italian for Italian lawyers coordinating a power of attorney with a client in Australia.
 - [Ayuda en español](https://lunadreyer.com.au/ayuda-comunidad-latina.html): Information in Spanish for the Latino community in Australia: accompaniment and help with everyday tasks such as renewing a driving licence, booking a doctor, finding a tradesperson, and phone calls or forms in English, with an enquiry form.
 - [Power of attorney guide for Italian property](https://lunadreyer.com.au/power-of-attorney-italy-property.html): Why overseas owners use a procura for an Italian property purchase or sale, the process, common mistakes, and choosing a representative.
