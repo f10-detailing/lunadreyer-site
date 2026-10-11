@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get in touch | Luna Dreyer, Translator</title>
-<meta name="description" content="Tell Luna Dreyer what your power of attorney or document is for and which country it is going to. Enquiries are sent directly to mail@lunadreyer.com.au.">
+<title>Get a quote | Luna Dreyer Translation</title>
+<meta name="description" content="Request a fixed quote from Luna Dreyer Translation: tell us the service, the languages and the country involved. Enquiries go directly to mail@lunadreyer.com.au.">
 <link rel="canonical" href="https://lunadreyer.com.au/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="analytics.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -18,22 +19,21 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a class="mark" href="index.html">Luna Dreyer<span>Translator</span></a>
-    <span class="langs">German, English, Spanish, Italian, Portuguese</span>
+    <a class="mark" href="index.html">Luna Dreyer<span>Translation</span></a>
+    <span class="util"><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a></span>
   </div>
 </header>
 
 <nav>
   <ul>
     <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="services.html#pricing">Pricing</a></li>
     <li><a href="power-of-attorney-apostille-australia.html">Powers of attorney</a></li>
     <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
-    <li><a href="heidelberg.html">Heidelberg</a></li>
-    <li><a href="translation-services.html">Translation services</a></li>
-    <li><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a></li>
-    <li><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="articles.html">Articles</a></li>
-    <li><a href="contact.html" aria-current="page">Get in touch</a></li>
+    <li class="nav-cta"><a href="contact.html" aria-current="page">Get a quote</a></li>
   </ul>
 </nav>
 
@@ -42,8 +42,8 @@
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">Get in touch</span>
-    <h1>Tell me what the document is, and where it is going.</h1>
-    <p>A few details are enough to start: what you need done, which country the document is for, and how to reach you. If I am not the right person for it, I will say so rather than take the work on.</p>
+    <h1>Tell us what you need, and where it is going.</h1>
+    <p>A few details are enough to start: which service you need, which languages or country are involved, and how to reach you. We reply with a fixed quote, and if we are not the right people for it, we will say so rather than take the work on.</p>
   </div>
 </section>
 
@@ -55,9 +55,9 @@
       <li>What the document actually is, or what you think it needs to be</li>
       <li>Which country it is going to, and ideally which notary, registry, court or lawyer is asking for it</li>
       <li>Your identity details exactly as they appear on your passport, if the matter involves a power of attorney</li>
-      <li>Any deadline you are working to, so I can tell you early if it is realistic</li>
+      <li>Any deadline you are working to, so we can tell you early if it is realistic</li>
     </ul>
-    <p>If you do not have all of this yet, write anyway. Working out what is still missing is often half the value of an early email.</p>
+    <p>If you do not have all of this yet, write anyway. Working out what is still missing is often half the value of an early email. For prices, see <a href="services.html#pricing">services and pricing</a>.</p>
   </div>
 </section>
 
@@ -91,34 +91,43 @@
 
       <div class="field-row">
         <div class="field">
-          <label for="country">Country the document is going to</label>
+          <label for="country">Country or market involved</label>
           <select id="country" name="country" required>
             <option value="" disabled selected>Choose a country</option>
             <option>Italy</option>
             <option>Germany</option>
             <option>Spain</option>
             <option>Portugal</option>
+            <option>Greece</option>
+            <option>Cyprus</option>
+            <option>Malta</option>
+            <option>France</option>
+            <option>Australia only</option>
             <option>Other</option>
           </select>
         </div>
         <div class="field">
-          <label for="purpose">What do you need it for</label>
-          <select id="purpose" name="purpose" required>
-            <option value="" disabled selected>Choose the closest match</option>
-            <option>Selling property</option>
-            <option>Buying property</option>
-            <option>Accepting or renouncing an inheritance</option>
-            <option>Banking, tax or a financial matter</option>
-            <option>Company or business matter</option>
-            <option>Court or legal representation</option>
-            <option>Not sure / other</option>
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option value="overseas-documents">Documents for use overseas (power of attorney, certificates)</option>
+            <option value="business">Business and commercial translation</option>
+            <option value="localisation">Website and software localisation</option>
+            <option value="transcreation">Transcreation and marketing copy</option>
+            <option value="proofreading">Proofreading, editing or post-editing</option>
+            <option value="subtitling">Subtitling and captioning</option>
+            <option value="transcription">Transcription</option>
+            <option value="typesetting">Multilingual typesetting</option>
+            <option value="liaison">Cultural consulting and language liaison</option>
+            <option value="accompaniment">Accompaniment and private interpreting</option>
+            <option value="not-sure">Not sure / other</option>
           </select>
         </div>
       </div>
 
       <div class="field">
-        <label for="message">Tell me more</label>
-        <textarea id="message" name="message" rows="6" required placeholder="What the document is, who is asking for it (a lawyer, notary, registry, bank), and your timeframe."></textarea>
+        <label for="message">Tell us more</label>
+        <textarea id="message" name="message" rows="6" required placeholder="What you need, the languages involved, who is asking for it (a lawyer, notary, registry, bank, client) and your timeframe."></textarea>
       </div>
 
       <button type="submit" class="submit">Send enquiry</button>
@@ -126,7 +135,7 @@
 
       <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
 
-      <p class="note">This form sends directly to my inbox. If you would rather email straight away, write to <a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>. I read every enquiry myself and reply by email, usually within one to two business days.</p>
+      <p class="note">This form goes directly to our inbox. If you would rather email straight away, write to <a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>. Every enquiry is read by a person, and we reply by email, usually within one to two business days.</p>
     </form>
 
   </div>
@@ -136,17 +145,45 @@
 
 <footer class="foot">
   <div class="wrap">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="power-of-attorney-apostille-australia.html">Powers of attorney</a></li>
-      <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
-      <li><a href="heidelberg.html">Heidelberg</a></li>
-      <li><a href="translation-services.html">Translation services</a></li>
-      <li><a href="avvocati.html">Per avvocati</a></li>
-      <li><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a></li>
-      <li><a href="articles.html">Articles</a></li>
-    </ul>
-    Luna Dreyer, translator. German, English, Spanish, Italian, Portuguese.
+  <div class="cols">
+    <div>
+      <p class="brand">Luna Dreyer Translation</p>
+      <p>Translation and facilitation for legal documents in Europe.</p>
+      <p><a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a></p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Services and pricing</a></li>
+        <li><a href="translation-services.html">Document translation</a></li>
+        <li><a href="power-of-attorney-apostille-australia.html">Powers of attorney</a></li>
+        <li><a href="services.html#localisation">Website localisation</a></li>
+        <li><a href="services.html#accompaniment">Accompaniment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="apostille-australia.html">Apostille in Australia</a></li>
+        <li><a href="australian-power-of-attorney-europe.html">Australian POA in Europe</a></li>
+        <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
+        <li><a href="power-of-attorney-property-greece.html">Property in Greece</a></li>
+        <li><a href="italian-property-inheritance-checklist.html">Italian inheritance checklist</a></li>
+        <li><a href="articles.html">All articles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Agency</h4>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="heidelberg.html">Heidelberg training</a></li>
+        <li><a href="contact.html">Get a quote</a></li>
+        <li><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a></li>
+        <li><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="small">&copy; 2026 Luna Dreyer Translation. Languages: German, English, Spanish, Italian, Portuguese, Catalan, Greek (including Cypriot Greek), Maltese, French. We do not provide NAATI-certified translations.</p>
   </div>
 </footer>
 
@@ -155,6 +192,12 @@
   var ACCESS_KEY = "f109b614-c5ff-44ee-867f-0df1f5753f38";
   var form = document.getElementById("enquiry-form");
   var status = document.getElementById("form-status");
+
+  // Preselect the service when arriving from a "Get a quote" button (contact.html?service=...).
+  try {
+    var wanted = new URLSearchParams(window.location.search).get("service");
+    if (wanted && form.service.querySelector('option[value="' + wanted + '"]')) form.service.value = wanted;
+  } catch (e) {}
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -182,9 +225,10 @@
       .then(function (res) { return res.json(); })
       .then(function (json) {
         if (json.success) {
+          window.ldtTrack("generate_lead", { form_language: "en", service: (form.service || form.help).value });
           form.reset();
           fieldsBox.hidden = true;
-          status.textContent = "Thank you — your enquiry has been sent. I will reply by email.";
+          status.textContent = "Thank you, your enquiry has been sent. We will reply by email.";
           status.className = "form-status success";
           status.hidden = false;
         } else {
