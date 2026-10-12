@@ -174,6 +174,13 @@
     data.append("subject", "New enquiry from lunadreyer.com.au");
     data.append("from_name", "lunadreyer.com.au contact form");
 
+    try {
+      var attr = JSON.parse(sessionStorage.getItem("ld_attr") || "null");
+      if (attr) {
+        Object.keys(attr).forEach(function (k) { data.append("attribution_" + k, attr[k]); });
+      }
+    } catch (err) {}
+
     var fieldsBox = form.querySelector(".fields");
     var button = form.querySelector(".submit");
     button.disabled = true;
@@ -212,5 +219,6 @@
 })();
 </script>
 
+<script src="attribution.js" defer></script>
 </body>
 </html>
