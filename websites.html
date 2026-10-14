@@ -53,6 +53,7 @@
     <span class="eyebrow">Website building and website translation</span>
     <h1>A website that works on every phone, in every language your customers speak.</h1>
     <p>I build clear, fast websites for Melbourne small businesses, set up Shopify online stores as a Shopify Partner, get products into Google Shopping, and translate websites so they read naturally in another language. One person handles the design, the words and the translation, so nothing gets lost between them.</p>
+    <p><a href="#contact">Ask for a free sample homepage</a></p>
   </div>
 </section>
 
@@ -177,11 +178,68 @@
   </div>
 </section>
 
-<section class="cta" id="contact">
+<section class="section alt" id="contact">
   <div class="wrap">
     <h2>Ask for a free sample homepage</h2>
-    <p>Send me your business name and your current website, if you have one, and I will put together a quick idea of what your new homepage could look like. No obligation.</p>
-    <a class="mail" href="mailto:mail@lunadreyer.com.au?subject=Website%20enquiry">mail@lunadreyer.com.au</a>
+    <p class="lede">Tell me about your business and I will put together a quick idea of what your new homepage could look like. No obligation, and no charge for the sample.</p>
+
+    <form id="web-enquiry-form" class="enquiry" autocomplete="on">
+      <div class="fields">
+      <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="business">Business name</label>
+          <input id="business" name="business" type="text" required autocomplete="organization">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone <span class="opt">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="current_site">Current website <span class="opt">(if you have one)</span></label>
+          <input id="current_site" name="current_site" type="text" autocomplete="url" placeholder="e.g. mybusiness.com.au">
+        </div>
+        <div class="field">
+          <label for="need">What do you need</label>
+          <select id="need" name="need" required>
+            <option value="" disabled selected>Choose the closest match</option>
+            <option>A new website</option>
+            <option>A redesign of my current website</option>
+            <option>A Shopify online store</option>
+            <option>Google Shopping / Merchant Center</option>
+            <option>Website translation</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Anything else? <span class="opt">(optional)</span></label>
+        <textarea id="message" name="message" rows="4" placeholder="Your trade or type of business, the suburbs you cover, anything you want on the site."></textarea>
+      </div>
+
+      <button type="submit" class="submit">Send enquiry</button>
+      </div>
+
+      <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+
+      <p class="note">This form sends directly to my inbox, and I reply myself, usually within one business day. If you would rather email, write to <a href="mailto:mail@lunadreyer.com.au?subject=Website%20enquiry">mail@lunadreyer.com.au</a>.</p>
+    </form>
   </div>
 </section>
 
@@ -205,6 +263,69 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var ACCESS_KEY = "f109b614-c5ff-44ee-867f-0df1f5753f38";
+  var form = document.getElementById("web-enquiry-form");
+  var status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (form.botcheck.checked) return;
+
+    var data = new FormData(form);
+    data.append("access_key", ACCESS_KEY);
+    data.append("subject", "New WEBSITE enquiry from lunadreyer.com.au");
+    data.append("from_name", "lunadreyer.com.au websites form");
+
+    try {
+      var attr = JSON.parse(sessionStorage.getItem("ld_attr") || "null");
+      if (attr) {
+        Object.keys(attr).forEach(function (k) { data.append("attribution_" + k, attr[k]); });
+      }
+    } catch (err) {}
+
+    var fieldsBox = form.querySelector(".fields");
+    var button = form.querySelector(".submit");
+    button.disabled = true;
+    button.textContent = "Sending…";
+    status.hidden = true;
+    status.textContent = "";
+    status.className = "form-status";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: data
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          if (typeof gtag === "function") {
+            gtag("event", "generate_lead", { form: "websites", need: data.get("need") || "" });
+          }
+          form.reset();
+          fieldsBox.hidden = true;
+          status.textContent = "Thank you, your enquiry has been sent. I will be in touch shortly.";
+          status.className = "form-status success";
+          status.hidden = false;
+        } else {
+          throw new Error(json.message || "Submission failed");
+        }
+      })
+      .catch(function () {
+        status.textContent = "Something went wrong sending this. Please email mail@lunadreyer.com.au directly.";
+        status.className = "form-status error";
+        status.hidden = false;
+      })
+      .finally(function () {
+        button.disabled = false;
+        button.textContent = "Send enquiry";
+      });
+  });
+})();
+</script>
 <script src="attribution.js" defer></script>
 </body>
 </html>
