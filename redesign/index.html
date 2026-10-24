@@ -7,14 +7,16 @@
 <meta name="description" content="Translations of Australian documents for use with European authorities: powers of attorney, Italian property purchases and apostille. Trained in Europe, practising in Australia.">
 <link rel="canonical" href="https://lunadreyer.com.au/">
 <link rel="alternate" hreflang="en-AU" href="https://lunadreyer.com.au/">
-<link rel="alternate" hreflang="it" href="https://lunadreyer.com.au/per-avvocati/">
-<link rel="alternate" hreflang="es" href="https://lunadreyer.com.au/en-espanol/">
+<link rel="alternate" hreflang="it" href="https://lunadreyer.com.au/avvocati.html">
+<link rel="alternate" hreflang="es" href="https://lunadreyer.com.au/ayuda-comunidad-latina.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luna Dreyer, Translator">
 <meta property="og:title" content="Translations for European Authorities | Luna Dreyer">
 <meta property="og:description" content="Translations of Australian documents for European authorities. Trained in Europe, practising in Australia.">
 <meta property="og:url" content="https://lunadreyer.com.au/">
-<meta name="theme-color" content="#f8f8f5">
+<meta property="og:image" content="https://lunadreyer.com.au/luna-portrait.jpg">
+<meta name="theme-color" content="#141416">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,16 +28,10 @@
       "jobTitle": "Translator",
       "email": "mail@lunadreyer.com.au",
       "url": "https://lunadreyer.com.au/",
-      "image": "https://lunadreyer.com.au/images/luna-portrait.jpg",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Heidelberg University"
-      },
+      "image": "https://lunadreyer.com.au/luna-portrait.jpg",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Heidelberg University" },
       "knowsLanguage": ["German", "Italian", "Spanish", "English"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "AU"
-      }
+      "address": { "@type": "PostalAddress", "addressCountry": "AU" }
     },
     {
       "@type": "ProfessionalService",
@@ -45,26 +41,16 @@
       "email": "mail@lunadreyer.com.au",
       "founder": { "@id": "https://lunadreyer.com.au/#luna" },
       "areaServed": ["Australia", "Europe"],
-      "serviceType": ["Certified translation", "Power of attorney translation", "Apostille support", "Translation for Italian property purchases"]
+      "serviceType": ["Power of attorney translation", "Apostille support", "Translation for Italian property purchases", "Translation for European authorities"]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Are your translations NAATI certified?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. NAATI certification applies to some Australian requirements. European requirements vary by country and by office, so the first step is to confirm what the receiving office needs." }
-        },
-        {
-          "@type": "Question",
-          "name": "How does a document travel from Australia to Europe?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The usual path has five steps: settle the requirements, translate, notarise, apostille, and lodge abroad." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you work with Italian lawyers who have Australian clients?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is an Italian-language page for lawyers, and Luna works with Australian documents that Italian lawyers need." }
-        }
+        { "@type": "Question", "name": "Are your translations NAATI certified?", "acceptedAnswer": { "@type": "Answer", "text": "No. NAATI certification applies to some Australian requirements. European requirements vary by country and by office, so the first step is to confirm what the receiving office needs." } },
+        { "@type": "Question", "name": "How does a document travel from Australia to Europe?", "acceptedAnswer": { "@type": "Answer", "text": "The usual path has five steps: settle the requirements, translate, notarise, apostille, and lodge abroad. Each step is confirmed with you before the next one starts." } },
+        { "@type": "Question", "name": "Do you handle powers of attorney?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Powers of attorney are one of the main things I translate and prepare for European use. The power of attorney page explains the steps in order." } },
+        { "@type": "Question", "name": "Do you work with Italian lawyers who have Australian clients?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is an Italian-language page for lawyers, and I work with Australian documents that Italian lawyers need for their own clients." } },
+        { "@type": "Question", "name": "What if I am not sure what my document needs?", "acceptedAnswer": { "@type": "Answer", "text": "Send me the document and the country it is going to. I will tell you what the receiving office is likely to need before you commit to anything." } }
       ]
     }
   ]
@@ -72,197 +58,222 @@
 </script>
 <style>
 :root{
-  --bg:#f8f8f5;
+  --bg:#ffffff;
+  --soft:#f6f6f2;
+  --soft-blue:#e7eef7;
   --card:#ffffff;
   --ink:#111214;
   --muted:#5d6168;
-  --line:#e4e4df;
-  --blue:#3d6fb4;
-  --blue-dark:#2f5a96;
-  --blue-soft:#8fa8c8;
-  --sand:#c9bfa5;
+  --line:#e6e6e1;
+  --blue:#3d72c4;
+  --blue-dark:#2f5ea6;
   --dark:#141416;
-  --radius-lg:28px;
-  --radius:18px;
+  --dark-2:#1e1f22;
+  --dark-3:#2a2c30;
+  --dark-text:#a9adb5;
+  --radius-xl:36px;
+  --radius-lg:24px;
+  --radius:16px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.6}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--blue-soft);outline-offset:3px}
-.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+:focus-visible{outline:3px solid #8fb0e0;outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:#fff;color:var(--ink);padding:10px 14px;border-radius:8px;z-index:100}
 .skip:focus{left:12px}
 .wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
-.eyebrow{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 16px}
-h1,h2,h3{letter-spacing:-.02em;line-height:1.1;margin:0}
-h1{font-size:clamp(2.4rem,5.2vw,4.3rem);font-weight:600}
-h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:600}
-h3{font-size:1.2rem;font-weight:600;letter-spacing:-.01em}
-.accent{color:var(--blue-soft)}
-.accent-2{color:var(--sand)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;margin:0;font-weight:500}
+h1{font-size:clamp(2.6rem,5.6vw,4.6rem)}
+h2{font-size:clamp(1.9rem,3.6vw,2.9rem)}
+h3{font-size:1.25rem;letter-spacing:-.015em}
 p{margin:0}
 .muted{color:var(--muted)}
-
-/* header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(248,248,245,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
-.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.2}
-.brand strong{font-size:1.05rem;font-weight:700}
-.brand span{font-size:.78rem;color:var(--muted)}
-.nav-main ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-.nav-main a{text-decoration:none;font-size:.92rem;color:var(--ink);white-space:nowrap}
-.nav-main a:hover{color:var(--blue)}
-.header-actions{display:flex;gap:10px;align-items:center}
-.menu-toggle{display:none;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font:inherit;font-size:.9rem;cursor:pointer;min-height:44px}
+.kicker{display:block;font-size:.85rem;color:var(--blue);margin-bottom:14px}
+.grad{background:linear-gradient(90deg,#8fa8c8 0%,#c9bfa5 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;font:inherit;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.btn-primary{background:var(--blue);border-color:var(--blue);color:#fff}
-.btn-primary:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
-.btn-ghost{background:transparent}
-.btn-ghost:hover{border-color:var(--ink)}
-.btn-light{background:#fff;border-color:#fff;color:var(--ink)}
-.btn-outline-light{background:transparent;border-color:#4a4d55;color:#fff}
-.btn-outline-light:hover{border-color:#fff}
-.arrow{display:inline-block;width:18px;height:18px;border-radius:50%;background:var(--blue);position:relative;flex:0 0 18px}
-.arrow::after{content:"";position:absolute;left:6px;top:5px;width:5px;height:5px;border-top:1.6px solid #fff;border-right:1.6px solid #fff;transform:rotate(45deg)}
-.link-arrow{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;color:var(--ink)}
-
-/* hero */
-.hero{padding:28px 0 0}
-.hero-shell{background:#fbfbf8;border-radius:var(--radius-lg);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;border:1px solid var(--line)}
-.hero-copy .lede{margin:24px 0 30px;color:var(--muted);font-size:1.08rem;max-width:34em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:11px 22px;border-radius:999px;font:inherit;font-weight:500;font-size:.95rem;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,color .2s;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-dark-ghost{background:transparent;color:#fff;border-color:#45474d}
+.btn-dark-ghost:hover{border-color:#fff}
+.btn-light-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-light-ghost:hover{border-color:var(--ink)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
-.trust-item{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:var(--muted);line-height:1.4}
-.trust-item svg{flex:0 0 22px;margin-top:2px}
-.trust-item strong{display:block;color:var(--ink);font-size:.9rem;font-weight:600}
-.photo-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px;min-height:0}
-.photo-grid .portrait{grid-row:span 2;border-radius:200px 200px 24px 24px;overflow:hidden;aspect-ratio:3/4;background:#dcd7cb}
-.photo-grid .portrait img{width:100%;height:100%;object-fit:cover}
-.tile{border-radius:24px;aspect-ratio:4/3;background:linear-gradient(135deg,#cfdcea,#eef3f8)}
-.tile.warm{background:linear-gradient(135deg,#e6dccb,#f4efe4)}
+.arrow{display:inline-block;width:18px;height:18px;border-radius:50%;background:var(--blue);position:relative;flex:0 0 18px}
+.arrow::after{content:"";position:absolute;left:5px;top:6px;width:5px;height:5px;border-top:1.6px solid #fff;border-right:1.6px solid #fff;transform:rotate(45deg)}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500;text-decoration:none}
+
+/* dark hero */
+.hero{background:var(--dark);color:#fff;border-radius:0 0 var(--radius-xl) var(--radius-xl);padding:18px 0 0;position:relative}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--dark-2);border-radius:18px;padding:10px 12px 10px 20px;position:relative;z-index:20}
+.brand{text-decoration:none;display:flex;align-items:center;gap:10px;font-weight:600;white-space:nowrap;flex:0 0 auto}
+.brand-mark{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#3d72c4,#8fa8c8);flex:0 0 26px}
+.brand small{display:block;font-weight:400;font-size:.72rem;color:var(--dark-text);line-height:1.2}
+.brand span{line-height:1.2}
+.nav-links ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:.88rem;color:#e6e7ea;white-space:nowrap}
+.nav-links a:hover{color:#fff}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.nav-actions .btn{min-height:40px;padding:8px 18px;font-size:.88rem}
+.menu-toggle{display:none;min-height:40px;padding:8px 16px;border-radius:999px;background:transparent;color:#fff;border:1px solid #45474d;font:inherit;font-size:.88rem;cursor:pointer}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(48px,7vw,88px) 0 clamp(36px,5vw,56px)}
+.hero-copy .lede{color:#c4c7cd;margin:26px 0 32px;max-width:32em;font-size:1.04rem}
+.strips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;height:clamp(300px,36vw,440px)}
+.strip{border-radius:18px;overflow:hidden;background:var(--dark-3)}
+.strip img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.strip.s1{border-top-left-radius:90px}
+.strip.s2{background:linear-gradient(170deg,#e9d9bf 0%,#9fb2cc 55%,#2c3a52 100%)}
+.strip.s3{border-bottom-right-radius:90px;background:linear-gradient(200deg,#cfd8e3 0%,#7d8ea6 60%,#1f2632 100%)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px 0 34px;border-top:1px solid #26272b}
+.trust-item{display:flex;gap:12px;align-items:center;font-size:.84rem;color:var(--dark-text);line-height:1.35}
+.trust-item svg{flex:0 0 26px}
+.trust-item strong{display:block;color:#fff;font-weight:500;font-size:.88rem}
 
 /* sections */
-section{padding:clamp(64px,9vw,112px) 0}
-.section-head{max-width:720px;margin:0 0 48px}
-.section-head p{margin-top:18px;color:var(--muted)}
-.section-head.center{text-align:center;margin-inline:auto}
-.section-head.center p{margin-inline:auto}
+section{padding:clamp(64px,9vw,110px) 0}
+.center-head{text-align:center;max-width:680px;margin:0 auto 48px}
+.center-head p{color:var(--muted);margin-top:18px}
 
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;height:100%}
-.card h3{margin-bottom:12px}
-.card p{color:var(--muted);font-size:.98rem}
-.card ul{list-style:none;margin:18px 0 0;padding:0;font-size:.95rem}
-.card li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
-.card li::before{content:"";flex:0 0 16px;height:16px;margin-top:4px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-4.8' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
-.card .card-link{margin-top:auto;padding-top:24px}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.tile{border-radius:var(--radius-lg);padding:clamp(24px,3vw,36px);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.tile h3{margin-bottom:12px}
+.tile p{color:var(--muted);font-size:.95rem}
+.tile .link-arrow{margin-top:22px}
+.t-lang{grid-column:span 12;background:linear-gradient(120deg,#f1efe9 0%,#e5e3dc 100%);display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;min-height:320px}
+.t-lang h2{margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.chip{background:#fff;border-radius:10px;padding:8px 14px;font-size:.9rem;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.t-status{grid-column:span 6;background:linear-gradient(160deg,#2b2d33 0%,#141416 100%);color:#fff;min-height:300px}
+.t-status p{color:#c4c7cd}
+.status-pill{margin-top:auto;align-self:flex-end;display:flex;align-items:center;gap:10px;background:#fff;color:var(--ink);border-radius:12px;padding:10px 16px;font-size:.9rem;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.status-pill .dot{width:18px;height:18px;border-radius:50%;background:#3f8f5a;position:relative;flex:0 0 18px}
+.status-pill .dot::after{content:"";position:absolute;left:6px;top:3px;width:4px;height:8px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg)}
+.status-tag{align-self:flex-start;margin-top:16px;background:var(--dark-2);border:1px solid #3a3c42;border-radius:999px;padding:6px 14px;font-size:.82rem;color:#fff}
+.t-cred{grid-column:span 6;background:var(--soft)}
+.cred-list{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.cred{display:flex;align-items:center;gap:14px;background:#fff;border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--muted)}
+.cred strong{color:var(--ink);font-weight:500;display:block}
+.cred svg{flex:0 0 24px}
+.t-docs{grid-column:span 5;background:var(--soft-blue)}
+.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:24px}
+.doc{display:flex;align-items:center;gap:10px;background:#fff;border-radius:10px;padding:10px 12px;font-size:.86rem;min-height:44px}
+.doc i{width:22px;height:22px;border-radius:6px;background:#dce6f3;flex:0 0 22px}
+.t-uses{grid-column:span 7;background:var(--soft)}
+.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:auto;padding-top:24px}
+.use{border-radius:14px;min-height:130px;padding:14px;display:flex;align-items:flex-end;color:#fff;font-size:.88rem;font-weight:500;text-decoration:none;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.55) 100%),var(--bgc)}
+.use:nth-child(1){--bgc:linear-gradient(140deg,#7d8ea6,#38465c)}
+.use:nth-child(2){--bgc:linear-gradient(140deg,#c9b48f,#6d5a3c)}
+.use:nth-child(3){--bgc:linear-gradient(140deg,#8a9a86,#3c4a3a)}
 
-/* process */
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;list-style:none;margin:0;padding:0;counter-reset:s;position:relative}
-.steps li{padding:26px 22px 0 0;border-top:2px solid var(--ink);margin-right:14px}
-.steps li:last-child{margin-right:0}
-.step-no{display:block;font-size:.85rem;color:var(--muted);font-weight:600;margin-bottom:14px}
-.steps h3{margin-bottom:10px;font-size:1.1rem}
-.steps p{color:var(--muted);font-size:.95rem}
+/* dark included band */
+.dark-band{background:var(--dark);border-radius:var(--radius-xl);color:#fff;padding:clamp(28px,4vw,48px) 0}
+.inc-shell{background:linear-gradient(150deg,#26282d 0%,#1a1b1e 60%,#22262c 100%);border-radius:var(--radius-lg);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.inc-shell .kicker{color:#7f8fa8}
+.inc-shell .body{color:#c4c7cd;margin:22px 0 30px;max-width:30em}
+.price-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px}
+.price-card .top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.12)}
+.price-card h3{font-size:1.35rem}
+.price-card .top p{color:var(--dark-text);font-size:.88rem;margin-top:6px}
+.price-card .quote{font-size:.88rem;color:#fff;white-space:nowrap}
+.inc-label{font-size:.8rem;color:var(--dark-text);margin:16px 0 10px}
+.inc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:.9rem}
+.inc-list li{display:flex;gap:10px;align-items:center}
+.inc-list li::before{content:"";width:8px;height:8px;border-radius:50%;background:#7fa37f;flex:0 0 8px}
+.addons-title{font-size:1.1rem;margin:28px 0 12px}
+.addon{display:flex;gap:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.addon .plus{width:22px;height:22px;border-radius:50%;border:1.5px solid #8b8f98;flex:0 0 22px;position:relative;margin-top:2px}
+.addon .plus::before,.addon .plus::after{content:"";position:absolute;background:#8b8f98;left:50%;top:50%;transform:translate(-50%,-50%)}
+.addon .plus::before{width:10px;height:1.5px}
+.addon .plus::after{width:1.5px;height:10px}
+.addon strong{display:block;font-weight:500;font-size:.95rem}
+.addon span{color:var(--dark-text);font-size:.86rem}
 
-/* split */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,96px);align-items:center}
-.panel{background:#eef0ec;border-radius:var(--radius-lg);padding:clamp(28px,4vw,52px);min-height:100%}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
-.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:.92rem;font-weight:500}
-.chip-plain{display:inline-block;background:var(--card);border-radius:14px;padding:12px 18px;margin:0 8px 10px 0;border:1px solid var(--line);font-size:.95rem}
-.split p.body{color:var(--muted);margin-top:18px}
-.split .link-arrow{margin-top:26px}
+/* recent work */
+.work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.work{background:var(--soft);border-radius:var(--radius-lg);padding:26px;display:flex;flex-direction:column;height:100%}
+.work .tag{align-self:flex-start;font-size:.78rem;background:#fff;border-radius:999px;padding:5px 12px;margin-bottom:18px;color:var(--muted)}
+.work h3{font-size:1.08rem;margin-bottom:10px}
+.work p{color:var(--muted);font-size:.93rem}
 
-/* about */
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,80px);align-items:start}
-.about-photo{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/5;background:#dcd7cb}
-.about-photo img{width:100%;height:100%;object-fit:cover}
-.facts{list-style:none;margin:28px 0 0;padding:0}
-.facts li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
-.facts li strong{font-weight:600}
-.facts li span{color:var(--muted)}
-.note{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-.note h3{font-size:1.05rem;margin-bottom:8px}
-.note p{color:var(--muted);font-size:.96rem}
-
-/* dark band */
-.band{padding:0 0 clamp(64px,9vw,112px)}
-.band-shell{background:var(--dark);color:#fff;border-radius:var(--radius-lg);padding:clamp(40px,6vw,80px) clamp(24px,5vw,64px)}
-.band-shell h2{text-align:center;margin-bottom:28px}
-.band-shell .cta-row{justify-content:center}
-.band-points{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-.band-point{background:#1f1f23;border-radius:var(--radius);padding:24px}
-.band-point h3{font-size:1.02rem;margin-bottom:8px}
-.band-point p{color:#a8acb4;font-size:.92rem}
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.steps li{border-top:1px solid var(--line);padding-top:16px;position:relative}
+.steps li::before{content:"";position:absolute;top:-1px;left:0;width:36px;height:2px;background:var(--ink)}
+.step-no{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--soft);align-items:center;justify-content:center;font-size:.8rem;margin-bottom:16px}
+.steps h3{font-size:1.05rem;margin-bottom:8px}
+.steps p{color:var(--muted);font-size:.92rem}
 
 /* faq */
-.faq-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,96px);align-items:start}
-.faq-grid .muted{margin-top:18px;font-size:.98rem}
+.faq-wrap{background:var(--soft);border-radius:var(--radius-xl);padding:clamp(40px,6vw,80px) clamp(20px,5vw,64px)}
+.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,6vw,80px);align-items:start}
+.faq-grid > div > p{margin-top:18px;color:var(--muted);font-size:.96rem}
 .faq details{border-bottom:1px solid var(--line)}
-.faq details:first-child{border-top:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-weight:600;font-size:1.04rem;min-height:56px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:1rem;min-height:56px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";flex:0 0 12px;height:12px;border-right:1.8px solid var(--ink);border-bottom:1.8px solid var(--ink);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
-.faq details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
-.faq details p{color:var(--muted);padding:0 40px 24px 0;font-size:.98rem}
+.faq summary::after{content:"";flex:0 0 9px;height:9px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.faq details p{color:var(--muted);padding:0 32px 22px 0;font-size:.95rem}
 
-/* contact */
-.contact{background:#fbfbf8;border-top:1px solid var(--line)}
-.contact-shell{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
-.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
-.contact-card .email{font-size:1.3rem;font-weight:600;text-decoration:none;color:var(--blue);word-break:break-word}
-.contact-card p{color:var(--muted);margin-top:14px}
-
-/* footer */
-.site-footer{background:var(--dark);color:#c9ccd2;padding:64px 0 32px;font-size:.94rem}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
-.site-footer h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:#fff;margin-bottom:16px;font-weight:600}
-.site-footer ul{list-style:none;margin:0;padding:0}
-.site-footer li{margin:10px 0}
-.site-footer a{text-decoration:none;color:#c9ccd2}
-.site-footer a:hover{color:#fff}
-.legal{border-top:1px solid #2b2c31;margin-top:44px;padding-top:22px;font-size:.84rem;color:#8a8e97;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* closing dark block */
+.closing{background:var(--dark);color:#fff;border-radius:var(--radius-xl) var(--radius-xl) 0 0;padding:clamp(64px,9vw,104px) 0 32px;margin-top:clamp(64px,9vw,110px)}
+.closing h2{text-align:center;max-width:14em;margin:0 auto 28px}
+.closing .cta-row{justify-content:center}
+.points{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px}
+.point{background:var(--dark-2);border:1px solid #26272b;border-radius:16px;padding:20px;display:flex;gap:12px;height:100%}
+.point .ic{width:24px;height:24px;border-radius:7px;background:var(--dark-3);flex:0 0 24px}
+.point h3{font-size:.98rem;margin-bottom:6px}
+.point p{color:var(--dark-text);font-size:.86rem}
+.foot{border-top:1px solid #26272b;margin-top:72px;padding-top:48px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;font-size:.9rem}
+.foot h3{font-size:.9rem;margin-bottom:14px;color:#fff}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin:9px 0}
+.foot a{color:var(--dark-text);text-decoration:none}
+.foot a:hover{color:#fff}
+.foot .about p{color:var(--dark-text);margin-top:12px}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;font-size:.82rem;color:#7c8088}
 
 /* responsive */
-@media (max-width:1080px){
-  .nav-main ul{gap:16px}
-  .nav-main a{font-size:.88rem}
-}
-@media (max-width:960px){
+@media (max-width:1240px){
   .menu-toggle{display:inline-flex;align-items:center}
-  .nav-main{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:18px 20px 26px}
-  .nav-main.open{display:block}
-  .nav-main ul{flex-direction:column;gap:0}
-  .nav-main li a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
-  .header-actions .btn-desk{display:none}
-  .hero-shell,.split,.about,.faq-grid,.contact-shell{grid-template-columns:1fr}
-  .trust-row{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:1fr;gap:28px}
-  .steps li{margin-right:0;padding-right:0}
-  .band-points{grid-template-columns:repeat(2,1fr)}
-  .foot-grid{grid-template-columns:1fr 1fr}
-  .about-photo{aspect-ratio:4/3}
+  .nav-actions .btn-desk{display:none}
+  .nav-links{display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--dark-2);border-radius:18px;padding:10px 20px 18px}
+  .nav-links.open{display:block}
+  .nav-links ul{flex-direction:column;gap:0}
+  .nav-links li a{display:block;padding:13px 0;border-bottom:1px solid #2e3035;font-size:.98rem}
+  .hero-grid,.t-lang,.inc-shell,.faq-grid{grid-template-columns:1fr}
+  .chips{justify-content:flex-start}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .t-status,.t-cred,.t-docs,.t-uses{grid-column:span 12}
+  .work-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr 1fr}
+  .points{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
 }
 @media (max-width:560px){
   body{font-size:16px}
-  .wrap{width:calc(100% - 28px)}
-  .hero{padding-top:14px}
-  .hero-shell{border-radius:22px;padding:24px 18px}
+  .wrap{width:calc(100% - 32px)}
+  .hero{border-radius:0 0 26px 26px}
+  .brand small{display:none}
+  .nav{padding:8px 8px 8px 14px}
+  .nav-actions .btn-primary{display:none}
   .cta-row .btn{flex:1 1 100%}
-  .trust-row{grid-template-columns:1fr}
-  .photo-grid{grid-template-columns:1fr 1fr}
-  .band-points{grid-template-columns:1fr}
-  .band-shell{border-radius:22px}
-  .panel,.about-photo,.contact-card{border-radius:22px}
-  .facts li{grid-template-columns:1fr;gap:4px}
+  .strips{height:260px;gap:8px}
+  .strip.s1{border-top-left-radius:60px}
+  .strip.s3{border-bottom-right-radius:60px}
+  .trust{grid-template-columns:1fr}
+  .doc-grid{grid-template-columns:1fr}
+  .use-grid{grid-template-columns:1fr}
+  .use{min-height:96px}
+  .inc-list{grid-template-columns:1fr}
+  .price-card .top{flex-direction:column}
+  .work-grid,.steps,.points,.foot{grid-template-columns:1fr}
+  .dark-band,.faq-wrap{border-radius:26px}
+  .closing{border-radius:26px 26px 0 0}
   .faq details p{padding-right:0}
-  .foot-grid{grid-template-columns:1fr}
-  .brand span{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -270,151 +281,218 @@ section{padding:clamp(64px,9vw,112px) 0}
 }
 </style>
 </head>
-<body id="top">
+<body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="brand" href="/" aria-label="Luna Dreyer, Translator, home">
-      <strong>Luna Dreyer</strong>
-      <span>Translator | German, Italian, Spanish, English</span>
-    </a>
-    <nav class="nav-main" id="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/powers-of-attorney/">Powers of attorney</a></li>
-        <li><a href="/property-in-italy/">Property in Italy</a></li>
-        <li><a href="/heidelberg/">Heidelberg</a></li>
-        <li><a href="/translation-services/">Translation services</a></li>
-        <li><a href="/websites/">Websites</a></li>
-        <li><a href="/per-avvocati/">Per avvocati</a></li>
-        <li><a href="/en-espanol/">En espa&ntilde;ol</a></li>
-        <li><a href="/articles/">Articles</a></li>
-        <li><a href="#contact">Get in touch</a></li>
-      </ul>
-    </nav>
-    <div class="header-actions">
-      <a class="btn btn-primary btn-desk" href="#contact">Get in touch</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+<header class="hero">
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Luna Dreyer, Translator, home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Luna Dreyer<small>Translator</small></span>
+      </a>
+      <nav class="nav-links" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="australian-power-of-attorney-europe.html">Powers of attorney</a></li>
+          <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
+          <li><a href="translation-services.html">Translation services</a></li>
+          <li><a href="heidelberg.html">Heidelberg</a></li>
+          <li><a href="websites.html">Websites</a></li>
+          <li><a href="avvocati.html" lang="it">Per avvocati</a></li>
+          <li><a href="ayuda-comunidad-latina.html" lang="es">En espa&ntilde;ol</a></li>
+          <li><a href="articles.html">Articles</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="contact.html">Get in touch</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      </div>
+    </div>
+
+    <div class="hero-grid" id="main">
+      <div class="hero-copy">
+        <h1><span class="grad">Translations</span> for documents that must satisfy a European authority</h1>
+        <p class="lede">Most translation work runs the other way. Mine takes Australian documents to Europe: powers of attorney, Italian property purchases, and the paperwork Italian lawyers need for Australian clients. Trained in Europe, practising in Australia.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="contact.html">Get in touch</a>
+          <a class="btn btn-dark-ghost" href="#how">How it works</a>
+        </div>
+      </div>
+      <div class="strips">
+        <div class="strip s1"><img src="images/luna-portrait.jpg" alt="Luna Dreyer, translator" width="720" height="900"></div>
+        <div class="strip s2" aria-hidden="true"></div>
+        <div class="strip s3" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 3l9 4v6c0 5.2-3.7 9.3-9 10.8C7.7 22.3 4 18.2 4 13V7z" fill="none" stroke="#8fa8c8" stroke-width="1.5"/></svg>
+        <span><strong>Heidelberg University</strong>BA Ubersetzungswissenschaft</span>
+      </div>
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" fill="none" stroke="#8fa8c8" stroke-width="1.5"/><path d="M3 13h20M13 3c3 3 3 17 0 20M13 3c-3 3-3 17 0 20" fill="none" stroke="#8fa8c8" stroke-width="1.2"/></svg>
+        <span><strong>Five working languages</strong>German first</span>
+      </div>
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" fill="none" stroke="#8fa8c8" stroke-width="1.5"/><path d="M8.5 13.2l3 3 6-6.2" fill="none" stroke="#8fa8c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Requirements first</strong>Confirmed before work starts</span>
+      </div>
+      <div class="trust-item">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="6" y="11" width="14" height="11" rx="3" fill="none" stroke="#8fa8c8" stroke-width="1.5"/><path d="M9 11V8.5a4 4 0 018 0V11" fill="none" stroke="#8fa8c8" stroke-width="1.5"/></svg>
+        <span><strong>Private and careful</strong>Your documents stay confidential</span>
+      </div>
     </div>
   </div>
 </header>
 
-<main id="main">
-
-  <div class="hero wrap">
-    <div class="hero-shell">
-      <div class="hero-copy">
-        <p class="eyebrow">Trained in Europe. Practising in Australia.</p>
-        <h1>Translations for documents that must satisfy a <span class="accent">European authority</span>.</h1>
-        <p class="lede">Most translation work runs the other way: foreign documents coming into Australia. My work goes from Australia to Europe, for powers of attorney, Italian property purchases and the paperwork Italian lawyers need for Australian clients.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#process">How the process works <span class="arrow" aria-hidden="true"></span></a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
-        <div class="trust-row">
-          <div class="trust-item">
-            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2l8 3.5v5.5c0 4.6-3.2 8.2-8 9.5-4.8-1.3-8-4.9-8-9.5V5.5z" fill="none" stroke="#3d6fb4" stroke-width="1.6"/></svg>
-            <span><strong>Heidelberg University</strong>BA Ubersetzungswissenschaft</span>
-          </div>
-          <div class="trust-item">
-            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8.5" fill="none" stroke="#3d6fb4" stroke-width="1.6"/><path d="M2.5 11h17M11 2.5c2.5 2.6 2.5 14.4 0 17M11 2.5c-2.5 2.6-2.5 14.4 0 17" fill="none" stroke="#3d6fb4" stroke-width="1.2"/></svg>
-            <span><strong>Five working languages</strong>German first</span>
-          </div>
-          <div class="trust-item">
-            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="3" y="3" width="16" height="16" rx="4" fill="none" stroke="#3d6fb4" stroke-width="1.6"/><path d="M7.5 11.2l2.3 2.3 4.7-4.8" fill="none" stroke="#3d6fb4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span><strong>Clear about requirements</strong>Confirmed before work starts</span>
-          </div>
-          <div class="trust-item">
-            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 18V8l7-5 7 5v10" fill="none" stroke="#3d6fb4" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 18v-5h5v5" fill="none" stroke="#3d6fb4" stroke-width="1.6"/></svg>
-            <span><strong>Powers of attorney and apostille</strong>Start to lodgement</span>
-          </div>
-        </div>
-      </div>
-      <div class="photo-grid" aria-label="Luna Dreyer and examples of the work">
-        <div class="portrait">
-          <!-- Replace with a real portrait: images/luna-portrait.jpg -->
-          <img src="images/luna-portrait.jpg" alt="Luna Dreyer, translator" width="600" height="800" onerror="this.style.display='none'">
-        </div>
-        <div class="tile" aria-hidden="true"></div>
-        <div class="tile warm" aria-hidden="true"></div>
-      </div>
-    </div>
-  </div>
-
-  <section aria-labelledby="where-heading">
+<main>
+  <section aria-labelledby="intro-heading">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Where people usually find me</p>
-        <h2 id="where-heading">Start with the situation you are in.</h2>
-        <p>Each of these pages covers what the document needs, what I translate, and what happens after the translation is finished.</p>
+      <div class="center-head">
+        <span class="kicker">What I do</span>
+        <h2 id="intro-heading">Australian documents, ready for Europe</h2>
+        <p>I translate and prepare Australian documents so a European office will accept them. That means knowing what the office asks for, translating it faithfully, and getting the notary and apostille steps done in the right order.</p>
       </div>
-      <div class="cards">
-        <article class="card">
-          <h3>Powers of attorney</h3>
-          <p>Translated and prepared for use in Europe, including the notarisation and apostille steps that often trip people up.</p>
-          <ul>
-            <li>Translation of the full instrument</li>
-            <li>Notarisation and apostille guidance</li>
-            <li>Lodgement abroad</li>
-          </ul>
-          <a class="link-arrow card-link" href="/powers-of-attorney/">How the process works <span class="arrow" aria-hidden="true"></span></a>
-        </article>
-        <article class="card">
-          <h3>Property in Italy</h3>
-          <p>The paperwork behind an Italian property purchase, when the buyer lives in Australia.</p>
-          <ul>
-            <li>Purchase documents</li>
-            <li>Identity and civil records</li>
-            <li>Apostille for each document</li>
-          </ul>
-          <a class="link-arrow card-link" href="/property-in-italy/">What the paperwork involves <span class="arrow" aria-hidden="true"></span></a>
-        </article>
-        <article class="card">
-          <h3>Italian lawyers with Australian clients</h3>
-          <p>For lawyers in Italy who need Australian documents translated and prepared for an Italian authority.</p>
-          <ul>
-            <li>Italian-language service page</li>
-            <li>Document translation for Italian use</li>
-            <li>Coordination with Australian sources</li>
-          </ul>
-          <a class="link-arrow card-link" href="/per-avvocati/">Informazioni per avvocati <span class="arrow" aria-hidden="true"></span></a>
-        </article>
-        <article class="card">
-          <h3>Not sure what it needs?</h3>
-          <p>Tell me the document and the country it is going to, and I will explain what the receiving office is likely to require.</p>
-          <ul>
-            <li>Document and destination</li>
-            <li>What must be confirmed first</li>
-            <li>Next steps in writing</li>
-          </ul>
-          <a class="link-arrow card-link" href="#contact">Ask me <span class="arrow" aria-hidden="true"></span></a>
-        </article>
+
+      <div class="bento">
+        <div class="tile t-lang">
+          <div>
+            <h2>Five working languages, with German first</h2>
+            <p>I work between German, Italian, Spanish and English, plus one more language. [Confirm the fifth language before launch.]</p>
+            <a class="link-arrow" href="translation-services.html">See translation services <span class="arrow" aria-hidden="true"></span></a>
+          </div>
+          <div class="chips" aria-label="Working languages">
+            <span class="chip">German</span>
+            <span class="chip">Italian</span>
+            <span class="chip">Spanish</span>
+            <span class="chip">English</span>
+            <span class="chip">[Fifth language]</span>
+          </div>
+        </div>
+
+        <div class="tile t-status">
+          <h3>Requirements settled before anything is translated</h3>
+          <p>Every European office has its own rules. I confirm what yours needs first, so the finished set is accepted at the counter.</p>
+          <span class="status-tag">Step 1 of 5</span>
+          <div class="status-pill"><span class="dot" aria-hidden="true"></span>Requirements confirmed for Italy</div>
+        </div>
+
+        <div class="tile t-cred">
+          <h3>Trained in Europe, clear about credentials</h3>
+          <p>A European translation degree, and a plain statement of what I am and am not certified for.</p>
+          <div class="cred-list">
+            <div class="cred">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 4.5-9 4.5-9-4.5z M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" fill="none" stroke="#3d72c4" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <span><strong>Heidelberg University</strong>BA Ubersetzungswissenschaft</span>
+            </div>
+            <div class="cred">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#3d72c4" stroke-width="1.5"/><path d="M12 8v5M12 16v.5" stroke="#3d72c4" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span><strong>Not NAATI certified</strong>European requirements are confirmed office by office</span>
+            </div>
+            <div class="cred">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3" fill="none" stroke="#3d72c4" stroke-width="1.5"/><path d="M8 10V7.5a4 4 0 018 0V10" fill="none" stroke="#3d72c4" stroke-width="1.5"/></svg>
+              <span><strong>Confidential handling</strong>From the first email to lodgement</span>
+            </div>
+          </div>
+          <a class="link-arrow" href="heidelberg.html">More about the training <span class="arrow" aria-hidden="true"></span></a>
+        </div>
+
+        <div class="tile t-docs">
+          <h3>Documents I prepare for Europe</h3>
+          <p>Each one is translated and taken through the notary and apostille steps it needs.</p>
+          <div class="doc-grid">
+            <span class="doc"><i aria-hidden="true"></i>Power of attorney</span>
+            <span class="doc"><i aria-hidden="true"></i>Property purchase papers</span>
+            <span class="doc"><i aria-hidden="true"></i>Identity documents</span>
+            <span class="doc"><i aria-hidden="true"></i>Civil records</span>
+            <span class="doc"><i aria-hidden="true"></i>Inheritance papers</span>
+            <span class="doc"><i aria-hidden="true"></i>Documents for lawyers</span>
+          </div>
+          <a class="link-arrow" href="power-of-attorney-apostille-australia.html">Power of attorney and apostille <span class="arrow" aria-hidden="true"></span></a>
+        </div>
+
+        <div class="tile t-uses">
+          <h3>Where people usually find me</h3>
+          <p>Start with the situation you are in. Each page explains what the document needs and what happens after the translation.</p>
+          <a class="link-arrow" href="contact.html">Not sure what it needs? Ask me <span class="arrow" aria-hidden="true"></span></a>
+          <div class="use-grid">
+            <a class="use" href="australian-power-of-attorney-europe.html">Powers of attorney</a>
+            <a class="use" href="buying-property-italy-from-australia.html">Property in Italy</a>
+            <a class="use" href="avvocati.html" lang="it">Per avvocati</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="recent-work" aria-labelledby="work-heading" style="padding-top:0">
+  <div class="wrap">
+    <div class="dark-band">
+      <div class="wrap" style="width:calc(100% - clamp(32px,6vw,96px))">
+        <div class="inc-shell">
+          <div>
+            <span class="kicker">Details</span>
+            <h2>What is included when I prepare a document for Europe</h2>
+            <p class="body">A faithful translation of every page, checked against the original, plus clear guidance on the steps that come after it. Each quote is based on the document and the country it is going to.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="contact.html">Get in touch</a>
+              <a class="btn btn-dark-ghost" href="#how">How it works</a>
+            </div>
+          </div>
+          <div>
+            <div class="price-card">
+              <div class="top">
+                <div>
+                  <h3>Translation for European use</h3>
+                  <p>Australian documents translated for a European authority.</p>
+                </div>
+                <span class="quote">Quoted per document</span>
+              </div>
+              <p class="inc-label">Included</p>
+              <ul class="inc-list">
+                <li>Requirements check</li>
+                <li>Faithful translation</li>
+                <li>Checked against original</li>
+                <li>Formatting kept</li>
+                <li>Next steps in writing</li>
+                <li>Confidential handling</li>
+              </ul>
+            </div>
+            <h3 class="addons-title">Steps that often come next</h3>
+            <div class="addon"><span class="plus" aria-hidden="true"></span><div><strong>Notarisation</strong><span>Arranged where the receiving office requires it.</span></div></div>
+            <div class="addon"><span class="plus" aria-hidden="true"></span><div><strong>Apostille</strong><span>So the document is recognised in the destination country.</span></div></div>
+            <div class="addon"><span class="plus" aria-hidden="true"></span><div><strong>Lodgement abroad</strong><span>The finished set goes to the authority that asked for it.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="recent-work" aria-labelledby="work-heading">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Recent work</p>
-        <h2 id="work-heading">A few jobs I have handled.</h2>
+      <div class="center-head">
+        <span class="kicker">Recent work</span>
+        <h2 id="work-heading">A few jobs I have handled</h2>
         <p>Names and identifying details are left out to protect my clients' privacy.</p>
       </div>
-      <div class="cards">
-        <article class="card">
+      <div class="work-grid">
+        <article class="work">
+          <span class="tag">Spain</span>
           <h3>Selling a property in Spain from Australia</h3>
           <p>A power of attorney translated into Spanish and English, a Notary Public signing, and a DFAT apostille, completed in the order Spain required.</p>
         </article>
-        <article class="card">
+        <article class="work">
+          <span class="tag">Everyday help</span>
           <h3>Getting a broken dryer repaired</h3>
           <p>Finding a technician, explaining the fault, arranging the visit and translating the quote.</p>
         </article>
-        <article class="card">
+        <article class="work">
+          <span class="tag">Everyday help</span>
           <h3>Renewing a driving licence</h3>
           <p>Checking the documents beforehand, then going along to the transport office.</p>
         </article>
-        <article class="card">
+        <article class="work">
+          <span class="tag">Everyday help</span>
           <h3>A GP appointment</h3>
           <p>Finding a GP, booking the appointment and explaining the paperwork afterwards.</p>
         </article>
@@ -422,195 +500,103 @@ section{padding:clamp(64px,9vw,112px) 0}
     </div>
   </section>
 
-  <section id="process" aria-labelledby="process-heading" style="padding-top:0">
+  <section id="how" aria-labelledby="how-heading" style="padding-top:0">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">How a document travels</p>
-        <h2 id="process-heading">From Australia to a European office, in five steps.</h2>
-        <p>Each step is confirmed with you before the next one starts, so there are no surprises at the lodgement counter.</p>
+      <div class="center-head">
+        <h2 id="how-heading">How a document travels</h2>
+        <p>From an Australian original to a European office, in five steps. Each one is confirmed with you before the next starts.</p>
       </div>
       <ol class="steps">
-        <li>
-          <span class="step-no">Step 1</span>
-          <h3>Settle requirements</h3>
-          <p>We confirm what the receiving office needs before any work starts.</p>
-        </li>
-        <li>
-          <span class="step-no">Step 2</span>
-          <h3>Translate</h3>
-          <p>A faithful translation of each page, checked against the original.</p>
-        </li>
-        <li>
-          <span class="step-no">Step 3</span>
-          <h3>Notarise</h3>
-          <p>The notary step, arranged where the document needs it.</p>
-        </li>
-        <li>
-          <span class="step-no">Step 4</span>
-          <h3>Apostille</h3>
-          <p>The apostille that lets the document be recognised abroad.</p>
-        </li>
-        <li>
-          <span class="step-no">Step 5</span>
-          <h3>Lodge abroad</h3>
-          <p>The finished set goes to the authority that asked for it.</p>
-        </li>
+        <li><span class="step-no">1</span><h3>Settle requirements</h3><p>We confirm what the receiving office needs before any work starts.</p></li>
+        <li><span class="step-no">2</span><h3>Translate</h3><p>A faithful translation of each page, checked against the original.</p></li>
+        <li><span class="step-no">3</span><h3>Notarise</h3><p>The notary step, arranged where the document needs it.</p></li>
+        <li><span class="step-no">4</span><h3>Apostille</h3><p>The apostille that lets the document be recognised abroad.</p></li>
+        <li><span class="step-no">5</span><h3>Lodge abroad</h3><p>The finished set goes to the authority that asked for it.</p></li>
       </ol>
     </div>
   </section>
 
-  <section aria-labelledby="languages-heading" style="padding-top:0">
-    <div class="wrap split">
-      <div>
-        <p class="eyebrow">Languages</p>
-        <h2 id="languages-heading">Five working languages, with German first.</h2>
-        <p class="body">I work between German, Italian, Spanish and English, plus one more language. [Confirm the fifth language before launch.]</p>
-        <a class="link-arrow" href="/translation-services/">See translation services <span class="arrow" aria-hidden="true"></span></a>
-      </div>
-      <div class="panel">
-        <div class="chips" aria-label="Working languages">
-          <span class="chip">German</span>
-          <span class="chip">Italian</span>
-          <span class="chip">Spanish</span>
-          <span class="chip">English</span>
-          <span class="chip">[Fifth language]</span>
+  <div class="wrap">
+    <div class="faq-wrap">
+      <div class="faq-grid">
+        <div>
+          <h2>Frequently asked questions</h2>
+          <p>Answers to the questions I hear most often. If yours is not here, get in touch.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" aria-labelledby="about-heading">
-    <div class="wrap about">
-      <div class="about-photo">
-        <img src="images/luna-portrait.jpg" alt="Portrait of Luna Dreyer" width="600" height="750" onerror="this.style.display='none'">
-      </div>
-      <div>
-        <p class="eyebrow">About</p>
-        <h2 id="about-heading">Trained in Europe, working from Australia.</h2>
-        <p class="muted" style="margin-top:18px">I trained in translation at Heidelberg University, and I now do the work for Australians whose documents must satisfy European authorities.</p>
-        <ul class="facts">
-          <li><strong>Qualification</strong><span>BA Ubersetzungswissenschaft, Heidelberg University</span></li>
-          <li><strong>Languages</strong><span>German, Italian, Spanish, English, and one more</span></li>
-          <li><strong>Focus</strong><span>Powers of attorney, Italian property, apostille</span></li>
-          <li><strong>Location</strong><span>Australia, working with European offices</span></li>
-        </ul>
-        <div class="note">
-          <h3>About NAATI</h3>
-          <p>I am not NAATI certified. NAATI applies to some Australian requirements. European requirements vary by country and by office, so I confirm what the receiving office needs before any work starts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="band">
-    <div class="wrap">
-      <div class="band-shell">
-        <h2>Get your documents started.</h2>
-        <div class="cta-row">
-          <a class="btn btn-light" href="#contact">Get in touch</a>
-          <a class="btn btn-outline-light" href="/translation-services/">Translation services</a>
-        </div>
-        <div class="band-points">
-          <div class="band-point">
-            <h3>Trained in Europe</h3>
-            <p>Heidelberg University, with a focus on translation for European use.</p>
-          </div>
-          <div class="band-point">
-            <h3>Requirements first</h3>
-            <p>What the office needs is confirmed in writing before work starts.</p>
-          </div>
-          <div class="band-point">
-            <h3>Clear steps</h3>
-            <p>Each stage is explained, from translation to lodgement abroad.</p>
-          </div>
-          <div class="band-point">
-            <h3>Straight answers</h3>
-            <p>If something will not be accepted, you will hear it from me first.</p>
-          </div>
+        <div class="faq">
+          <details>
+            <summary>Are your translations NAATI certified?</summary>
+            <p>No. NAATI certification applies to some Australian requirements. European requirements vary by country and by office, so the first step is to confirm what the receiving office needs.</p>
+          </details>
+          <details>
+            <summary>How does a document travel from Australia to Europe?</summary>
+            <p>The usual path has five steps: settle the requirements, translate, notarise, apostille, and lodge abroad. Each step is confirmed with you before the next one starts.</p>
+          </details>
+          <details>
+            <summary>Do you handle powers of attorney?</summary>
+            <p>Yes. Powers of attorney are one of the main things I translate and prepare for European use. The power of attorney page explains the steps in order.</p>
+          </details>
+          <details>
+            <summary>Do you work with Italian lawyers who have Australian clients?</summary>
+            <p>Yes. There is an Italian-language page for lawyers, and I work with Australian documents that Italian lawyers need for their own clients.</p>
+          </details>
+          <details>
+            <summary>What if I am not sure what my document needs?</summary>
+            <p>Send me the document and the country it is going to. I will tell you what the receiving office is likely to need before you commit to anything.</p>
+          </details>
         </div>
       </div>
     </div>
   </div>
-
-  <section aria-labelledby="faq-heading" style="padding-top:0">
-    <div class="wrap faq-grid">
-      <div>
-        <p class="eyebrow">FAQ</p>
-        <h2 id="faq-heading">Frequently asked questions</h2>
-        <p class="muted">Answers to the questions I hear most often. If yours is not here, get in touch.</p>
-      </div>
-      <div class="faq">
-        <details>
-          <summary>Are your translations NAATI certified?</summary>
-          <p>No. NAATI certification applies to some Australian requirements. European requirements vary by country and by office, so the first step is to confirm what the receiving office needs.</p>
-        </details>
-        <details>
-          <summary>How does a document travel from Australia to Europe?</summary>
-          <p>The usual path has five steps: settle the requirements, translate, notarise, apostille, and lodge abroad. Each step is confirmed with you before the next one starts.</p>
-        </details>
-        <details>
-          <summary>Do you handle powers of attorney?</summary>
-          <p>Yes. Powers of attorney are one of the main things I translate and prepare for European use. The power of attorney page explains the steps in order.</p>
-        </details>
-        <details>
-          <summary>Do you work with Italian lawyers who have Australian clients?</summary>
-          <p>Yes. There is an Italian-language page for lawyers, and I work with Australian documents that Italian lawyers need for their own clients.</p>
-        </details>
-        <details>
-          <summary>What if I am not sure what my document needs?</summary>
-          <p>Send me the document and the country it is going to. I will tell you what the receiving office is likely to need before you commit to anything.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
-    <div class="wrap contact-shell">
-      <div>
-        <p class="eyebrow">Get in touch</p>
-        <h2 id="contact-heading">Tell me the document and where it is going.</h2>
-        <p class="muted" style="margin-top:18px">That is enough to start. I will reply with what the receiving office is likely to need and what the next steps are.</p>
-      </div>
-      <div class="contact-card">
-        <p>Email</p>
-        <a class="email" href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>
-        <p>Include the document type, the country it is going to, and any deadline you are working to.</p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site-footer">
+<footer class="closing">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <h3>Luna Dreyer</h3>
+    <h2>Get your documents ready for Europe</h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="contact.html">Get in touch</a>
+      <a class="btn btn-dark-ghost" href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>
+    </div>
+    <div class="points">
+      <div class="point"><span class="ic" aria-hidden="true"></span><div><h3>Trained in Europe</h3><p>A Heidelberg University translation degree.</p></div></div>
+      <div class="point"><span class="ic" aria-hidden="true"></span><div><h3>Requirements first</h3><p>What the office needs is confirmed before work starts.</p></div></div>
+      <div class="point"><span class="ic" aria-hidden="true"></span><div><h3>Clear steps</h3><p>Translation, notary, apostille and lodgement, in order.</p></div></div>
+      <div class="point"><span class="ic" aria-hidden="true"></span><div><h3>Confidential</h3><p>Careful handling from the first email to lodgement.</p></div></div>
+    </div>
+
+    <div class="foot">
+      <div class="about">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Luna Dreyer</span></a>
         <p>Translator. Trained in Europe, practising in Australia.</p>
-        <p style="margin-top:14px"><a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a></p>
+        <p><a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a></p>
       </div>
       <div>
         <h3>Services</h3>
         <ul>
-          <li><a href="/powers-of-attorney/">Powers of attorney</a></li>
-          <li><a href="/property-in-italy/">Property in Italy</a></li>
-          <li><a href="/translation-services/">Translation services</a></li>
-          <li><a href="/websites/">Websites</a></li>
+          <li><a href="australian-power-of-attorney-europe.html">Powers of attorney</a></li>
+          <li><a href="buying-property-italy-from-australia.html">Property in Italy</a></li>
+          <li><a href="apostille-australia.html">Apostille</a></li>
+          <li><a href="translation-services.html">Translation services</a></li>
+          <li><a href="websites.html">Websites</a></li>
         </ul>
       </div>
       <div>
-        <h3>For professionals</h3>
+        <h3>Guides</h3>
         <ul>
-          <li><a href="/per-avvocati/">Per avvocati</a></li>
-          <li><a href="/en-espanol/">En espa&ntilde;ol</a></li>
-          <li><a href="/heidelberg/">Heidelberg</a></li>
+          <li><a href="power-of-attorney-italy-property.html">Power of attorney for Italy</a></li>
+          <li><a href="power-of-attorney-property-greece.html">Power of attorney for Greece</a></li>
+          <li><a href="power-of-attorney-victoria.html">Power of attorney in Victoria</a></li>
+          <li><a href="italian-property-inheritance-checklist.html">Italian inheritance checklist</a></li>
+          <li><a href="articles.html">All articles</a></li>
         </ul>
       </div>
       <div>
-        <h3>Site</h3>
+        <h3>About</h3>
         <ul>
-          <li><a href="/articles/">Articles</a></li>
-          <li><a href="#contact">Get in touch</a></li>
+          <li><a href="heidelberg.html">Heidelberg</a></li>
+          <li><a href="avvocati.html" lang="it">Per avvocati</a></li>
+          <li><a href="ayuda-comunidad-latina.html" lang="es">En espa&ntilde;ol</a></li>
+          <li><a href="contact.html">Get in touch</a></li>
         </ul>
       </div>
     </div>
