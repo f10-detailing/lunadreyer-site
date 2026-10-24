@@ -185,3 +185,10 @@ padding-left:1rem;border-left:2px solid var(--rule)}
   box-shadow:0 12px 30px -18px rgba(14,33,64,.45)}
 .shot-mobile img{border-radius:14px}
 @media(max-width:45.99rem){.shot-mobile{max-width:15rem;margin:0 auto}}
+.more-concepts{margin-top:2.5rem}
+.more-concepts summary{display:inline-block;cursor:pointer;list-style:none;padding:.75rem 1.4rem;
+  border:1px solid var(--navy);color:var(--navy);font-weight:600;font-size:.95rem;border-radius:2px}
+.more-concepts summary::-webkit-details-marker{display:none}
+.more-concepts summary:hover{background:var(--navy);color:#fff}
+.more-concepts[open] summary{display:none}
+.more-concepts > .concept:first-of-type{margin-top:0}
