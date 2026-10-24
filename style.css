@@ -173,3 +173,15 @@ padding-left:1rem;border-left:2px solid var(--rule)}
 @media(min-width:46rem){.grid > .cell:last-child:nth-child(odd){grid-column:1 / -1}}
 /* Keep the highlighted step marker visible on grey (alt) sections */
 .section.alt .chain li.mine::before{background:var(--navy);color:#fff}
+
+/* Concept designs on the Websites page: desktop screenshot with the phone view beside it */
+.concept{margin-top:2.75rem}
+.concept h3{margin-top:0}
+.concept-shots{display:grid;gap:1rem;margin-top:1.25rem;align-items:end}
+@media(min-width:46rem){.concept-shots{grid-template-columns:1fr 13.5rem;gap:1.5rem}
+  .concept-shots--single{grid-template-columns:1fr}}
+.concept-shots figure{margin:0}
+.concept-shots img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:4px;
+  box-shadow:0 12px 30px -18px rgba(14,33,64,.45)}
+.shot-mobile img{border-radius:14px}
+@media(max-width:45.99rem){.shot-mobile{max-width:15rem;margin:0 auto}}
