@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://lunadreyer.com.au/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="analytics.js"></script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -22,8 +22,8 @@
 
 <header class="masthead">
   <div class="wrap">
-    <a class="mark" href="index.html">Luna Dreyer<span>Translation</span></a>
-    <span class="util"><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a></span>
+    <a class="mark" href="index.html"><img src="favicon.svg" alt="" width="36" height="36"><span class="name">Luna Dreyer Translation<small>Legal documents for Europe</small></span></a>
+    <span class="util"><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a><a class="btn" href="contact.html">Get a quote</a></span>
   </div>
 </header>
 
@@ -43,14 +43,116 @@
 <main>
 
 <section class="hero">
-  <div class="wrap hero-3d-layout">
-    <div class="hero-copy">
+  <div class="wrap hero-grid">
+    <div>
       <span class="eyebrow">Translation and facilitation for legal documents in Europe</span>
-      <h1>Documents and words that are accepted where they are going.</h1>
-      <p>Most translation work in Australia runs one way: foreign documents turned into English for Australian departments. Luna Dreyer Translation works in the other direction, on the paperwork Australians need accepted by a notary, a registry, a lawyer or a court in Europe, and on the business, creative and everyday language work around it.</p>
-      <p><a class="btn" href="contact.html">Get a quote</a> <a class="btn ghost" href="services.html">Our services</a></p>
+      <h1>Documents that are accepted where they are going.</h1>
+      <p>Powers of attorney, certificates, contracts and everyday paperwork, translated and coordinated so a notary, registry, lawyer or court in Europe can act on them the first time.</p>
+      <div class="btn-row">
+        <a class="btn lg" href="contact.html">Get a fixed quote</a>
+        <a class="btn ghost lg" href="services.html#pricing">See pricing</a>
+      </div>
+      <ul class="trust">
+        <li>Fixed price before work starts</li>
+        <li>Heidelberg-trained founder</li>
+        <li>9 languages</li>
+      </ul>
     </div>
-    <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
+
+    <form class="quote-card" action="contact.html" method="get">
+      <h2>Get your quote</h2>
+      <p class="from">Documents for use overseas from <strong>$69</strong> per page</p>
+      <label for="q-service">What do you need?</label>
+      <select id="q-service" name="service">
+        <option value="overseas-documents">Power of attorney or official document</option>
+        <option value="business">Business or legal translation</option>
+        <option value="localisation">Website or app translation</option>
+        <option value="transcreation">Marketing copy (transcreation)</option>
+        <option value="proofreading">Proofreading or editing</option>
+        <option value="subtitling">Subtitles</option>
+        <option value="transcription">Transcription</option>
+        <option value="typesetting">Typesetting</option>
+        <option value="liaison">Liaison with a foreign lawyer or office</option>
+        <option value="accompaniment">Accompaniment or interpreting</option>
+        <option value="not-sure">Not sure yet</option>
+      </select>
+      <label for="q-country">Where is it going?</label>
+      <select id="q-country" name="country">
+        <option>Italy</option>
+        <option>Germany</option>
+        <option>Spain</option>
+        <option>Portugal</option>
+        <option>Greece</option>
+        <option>Cyprus</option>
+        <option>Malta</option>
+        <option>France</option>
+        <option>Australia only</option>
+        <option>Other</option>
+      </select>
+      <button class="btn lg" type="submit">Continue</button>
+      <p class="fine">No payment now. We reply with a fixed quote, usually within one to two business days.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap center">
+    <h2>How it works</h2>
+    <p class="lede">Three steps, and you always know the price before anything starts.</p>
+    <ol class="chain">
+      <li><h3>Tell us what you need</h3>
+        <p>Send the document or describe the matter, the languages, and who is asking for it.</p></li>
+      <li class="mine"><h3>Get a fixed quote</h3>
+        <p>We confirm what the receiving side requires and quote a fixed price and timeline.</p></li>
+      <li><h3>Receive it ready to use</h3>
+        <p>Translated, checked and, where needed, notarised and apostilled in the right order.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>Our services</h2>
+    <p class="lede">Published starting prices, matched to established Australian agencies, or a fixed quote.</p>
+    <div class="grid three">
+      <div class="svc">
+        <span class="num">01</span>
+        <h3>Documents for use overseas</h3>
+        <p>Powers of attorney, wills, certificates and declarations for a notary, registry or court in Europe.</p>
+        <div class="foot-row"><span class="price">From $69<small>per page, incl. GST</small></span><a class="btn" href="contact.html?service=overseas-documents">Get a quote</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">02</span>
+        <h3>Business and legal translation</h3>
+        <p>Contracts, company records, reports and financial statements for an overseas bank or counterparty.</p>
+        <div class="foot-row"><span class="price">From $25<small>per 100 words + GST</small></span><a class="btn" href="contact.html?service=business">Get a quote</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">03</span>
+        <h3>Website and software localisation</h3>
+        <p>Websites, online shops and apps adapted for European markets and checked in place before launch.</p>
+        <div class="foot-row"><span class="price">From $25<small>per 100 words + GST</small></span><a class="btn" href="contact.html?service=localisation">Get a quote</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">04</span>
+        <h3>Proofreading and post-editing</h3>
+        <p>A second professional check of a translation, or machine and AI output brought up to a human standard.</p>
+        <div class="foot-row"><span class="price">From $65<small>per hour</small></span><a class="btn" href="contact.html?service=proofreading">Get a quote</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">05</span>
+        <h3>Transcription and subtitles</h3>
+        <p>Recordings turned into accurate text, and translated subtitles for video, courses and social media.</p>
+        <div class="foot-row"><span class="price">From $2.50<small>per audio minute + GST</small></span><a class="btn" href="contact.html?service=transcription">Get a quote</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">06</span>
+        <h3>Liaison and accompaniment</h3>
+        <p>We deal with the foreign lawyer, notary or office for you, or come with you to appointments here.</p>
+        <div class="foot-row"><span class="price">Fixed quote<small>priced per matter</small></span><a class="btn" href="contact.html?service=liaison">Get a quote</a></div>
+      </div>
+    </div>
+    <p class="more"><a href="services.html">All 10 services and full pricing</a></p>
   </div>
 </section>
 
@@ -70,8 +172,8 @@
       </div>
       <div class="cell">
         <h3>A business going into Europe</h3>
-        <p>Contracts, company records, a website or a campaign that has to read as if it were written locally, in German, Spanish, Italian, Portuguese, Greek, Maltese or French.</p>
-        <p class="more"><a href="services.html">Business, localisation and transcreation</a></p>
+        <p>Contracts, company records, a website or a campaign that has to read as if it were written locally.</p>
+        <p class="more"><a href="websites.html">Websites, Shopify and translation</a></p>
       </div>
       <div class="cell">
         <h3>A document and no idea what it needs</h3>
@@ -83,52 +185,26 @@
 </section>
 
 <section class="section alt">
-  <div class="wrap">
-    <h2>Our services</h2>
-    <p class="lede">Ten services, none of which requires NAATI certification. Published starting prices, or a fixed quote before any work begins.</p>
-    <div class="table-scroll">
-      <table>
-        <thead><tr><th scope="col">Service</th><th scope="col">From</th></tr></thead>
-        <tbody>
-          <tr><td><a href="services.html#overseas-documents">Documents for use overseas</a></td><td>$69 per page incl. GST</td></tr>
-          <tr><td><a href="services.html#business">Business and commercial translation</a></td><td>$25 per 100 words + GST</td></tr>
-          <tr><td><a href="services.html#localisation">Website and software localisation</a></td><td>$25 per 100 words + GST</td></tr>
-          <tr><td><a href="services.html#transcreation">Transcreation and marketing copy</a></td><td>Fixed quote</td></tr>
-          <tr><td><a href="services.html#proofreading">Proofreading, editing and post-editing</a></td><td>$65 per hour</td></tr>
-          <tr><td><a href="services.html#subtitling">Subtitling and captioning</a></td><td>Fixed quote</td></tr>
-          <tr><td><a href="services.html#transcription">Transcription</a></td><td>$2.50 per audio minute + GST</td></tr>
-          <tr><td><a href="services.html#typesetting">Multilingual typesetting</a></td><td>$15 per page + GST</td></tr>
-          <tr><td><a href="services.html#liaison">Cultural consulting and language liaison</a></td><td>Fixed quote</td></tr>
-          <tr><td><a href="services.html#accompaniment">Accompaniment and private interpreting</a></td><td>Fixed quote</td></tr>
-        </tbody>
-      </table>
+  <div class="wrap center">
+    <h2>Why clients choose us</h2>
+    <div class="grid three" style="text-align:left">
+      <div class="cell"><h3>Requirements first</h3>
+        <p>Before anything is translated, we confirm what the receiving authority actually needs. It is the step that prevents most rejections.</p></div>
+      <div class="cell"><h3>Fixed, published prices</h3>
+        <p>Starting prices on the site, and a fixed written quote before any work begins. No surprises on the invoice.</p></div>
+      <div class="cell"><h3>Trained for legal text</h3>
+        <p>Our founder trained in translation at Heidelberg University, where legal and official text is the core of the programme.</p></div>
+      <div class="cell"><h3>One agency across Europe</h3>
+        <p>German, Spanish, Italian, Portuguese, Greek, Maltese and French, so one contact handles the whole matter.</p></div>
+      <div class="cell"><h3>The right order, coordinated</h3>
+        <p>Translation, Notary Public and DFAT apostille arranged in sequence, so nothing has to be signed twice.</p></div>
+      <div class="cell"><h3>Honest about limits</h3>
+        <p>We are not lawyers and do not provide NAATI-certified translations. If we are not the right fit, we say so before you pay.</p></div>
     </div>
-    <p class="more"><a href="services.html">All services and pricing</a></p>
   </div>
 </section>
 
 <section class="section">
-  <div class="wrap">
-    <h2>How a document travels from here to there</h2>
-    <p class="lede">The order matters. Translating too early, before the wording is settled, is the most common reason a document is refused.</p>
-
-    <ol class="chain">
-      <li><h3>Settle what the document must say</h3>
-        <p>The receiving authority or lawyer sets the requirements. This is decided first, not after signing.</p></li>
-      <li class="mine"><h3>Translation</h3>
-        <p>The document is prepared in both languages, so what is signed in Australia is what is read in Europe.</p></li>
-      <li><h3>Notarisation</h3>
-        <p>A public notary witnesses the signature and applies their seal.</p></li>
-      <li><h3>Apostille</h3>
-        <p>The Department of Foreign Affairs and Trade legalises the notary's seal for use in Hague Convention countries.</p></li>
-      <li><h3>Lodged abroad</h3>
-        <p>The document reaches the lawyer, registry or authority in a form they can act on.</p></li>
-    </ol>
-
-  </div>
-</section>
-
-<section class="section alt">
   <div class="wrap about">
     <figure class="portrait">
       <img src="luna-portrait.jpg" alt="Luna Dreyer, founder of Luna Dreyer Translation" width="720" height="900">
@@ -136,29 +212,36 @@
     </figure>
     <div>
       <h2>About the agency</h2>
-      <p>Luna Dreyer Translation was founded by Luna Dreyer, who holds a Bachelor of Arts in Übersetzungswissenschaft from Heidelberg University, in German, English and Spanish, and also works in Italian and Portuguese. Heidelberg's translation institute was the first of its kind in Europe, and its training is built around precisely this kind of work: legal and official text where precision is the entire job.</p>
-      <p>Our collaborators cover Greek (including Cypriot Greek), Italian, Maltese and French, so one agency can handle a matter from Australia to most of southern Europe.</p>
-      <p>We do not provide NAATI-certified translations. NAATI is the Australian system, and it is what you need for foreign documents going to Australian departments. For documents leaving Australia, European authorities apply their own requirements, which vary by country and by the office receiving the document. If you are unsure which applies to you, ask us before you pay for anything.</p>
+      <p>Luna Dreyer Translation was founded by Luna Dreyer, who holds a Bachelor of Arts in Übersetzungswissenschaft from Heidelberg University, in German, English and Spanish, and also works in Italian and Portuguese. Our collaborators cover Greek (including Cypriot Greek), Italian, Maltese and French.</p>
+      <p>Most translation work in Australia runs one way: foreign documents into English for Australian departments. We work in the other direction, on the paperwork Australians need accepted in Europe, and on the business, creative and everyday language work around it.</p>
       <p class="more"><a href="about.html">About the agency and our languages</a></p>
-      <dl class="facts">
-        <dt>Founder</dt>
-        <dd>Luna Dreyer, BA Übersetzungswissenschaft, Heidelberg University</dd>
-        <dt>Languages</dt>
-        <dd>German, English, Spanish, Italian, Portuguese, Greek, Maltese, French</dd>
-        <dt>Focus</dt>
-        <dd>Powers of attorney, apostille processes, legal and official documents</dd>
-        <dt>Based</dt>
-        <dd>Australia, working with European authorities and lawyers</dd>
-      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <div class="faq">
+      <details><summary>Do you provide NAATI-certified translations?</summary>
+        <p>No. NAATI is what Australian government departments usually require for foreign documents, for example for a visa. Documents leaving Australia are judged by the receiving country's rules, and private and commercial work is your choice. If you need NAATI, we will tell you straight away.</p></details>
+      <details><summary>How much will it cost?</summary>
+        <p>Documents for use overseas start from $69 per page including GST, and business translation from $25 per 100 words plus GST. Every job is confirmed in a fixed written quote first. See <a href="services.html#pricing">full pricing</a>.</p></details>
+      <details><summary>How long does it take?</summary>
+        <p>Translation usually takes a few business days. A power of attorney with notarisation and apostille typically takes one to three weeks end to end, mostly depending on how quickly the receiving lawyer confirms the wording.</p></details>
+      <details><summary>Do Notary and apostille fees come on top?</summary>
+        <p>Yes. The Notary Public and DFAT charge their own fees, which are paid to them. We coordinate the steps and tell you the costs up front.</p></details>
+      <details><summary>Which languages do you work in?</summary>
+        <p>German, English, Spanish, Italian, Portuguese and Catalan, plus Greek (including Cypriot Greek), Maltese and French through our collaborators.</p></details>
     </div>
   </div>
 </section>
 
 <section class="cta" id="contact">
   <div class="wrap">
-    <h2>Get a quote</h2>
-    <p>Tell us what the document is, which country it is going to, and who is asking for it. If we are not the right people for it, we will say so.</p>
-    <a class="btn" href="contact.html">Start an enquiry</a>
+    <h2>Ready to get started?</h2>
+    <p>Tell us what the document is, which country it is going to, and who is asking for it. You get a fixed quote before anything begins.</p>
+    <a class="btn lg" href="contact.html">Get a fixed quote</a>
   </div>
 </section>
 
@@ -210,8 +293,6 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
-<script src="hero-scene.js" defer></script>
 
 <script src="attribution.js" defer></script>
 </body>
