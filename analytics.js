@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var GA_ID = "";
+  var GA_ID = "G-RNXNZ00KJS";
 
   // Pages call window.ldtTrack(...) on key actions; it is a no-op until GA_ID is set.
   window.ldtTrack = function () {};
