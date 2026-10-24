@@ -168,3 +168,8 @@ padding-left:1rem;border-left:2px solid var(--rule)}
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* An odd last card spans the full row instead of leaving an empty cell */
+@media(min-width:46rem){.grid > .cell:last-child:nth-child(odd){grid-column:1 / -1}}
+/* Keep the highlighted step marker visible on grey (alt) sections */
+.section.alt .chain li.mine::before{background:var(--navy);color:#fff}
