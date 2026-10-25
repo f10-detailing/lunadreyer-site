@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://lunadreyer.com.au/power-of-attorney-property-greece.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
@@ -34,22 +34,29 @@
 </head>
 <body>
 
-<header class="masthead">
+<header class="site-head">
   <div class="wrap">
-    <a class="mark" href="index.html">Luna Dreyer<span>Translation</span></a>
-    <span class="langs">German, English, Spanish, Italian, Portuguese</span>
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Luna Dreyer, home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Luna Dreyer<small>Translation</small></span>
+      </a>
+      <nav class="nav-links" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="property.html" aria-current="page">Property</a></li>
+          <li><a href="power-of-attorney-apostille-australia.html">Apostille</a></li>
+          <li><a href="websites.html">Websites</a></li>
+          <li><a href="concierge.html">Concierge</a></li>
+          <li class="nav-contact"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="contact.html">Get in touch</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-close="Close">Menu</button>
+      </div>
+    </div>
   </div>
 </header>
-
-<nav>
-  <ul>
-    <li><a href="property.html" aria-current="page">Property</a></li>
-    <li><a href="power-of-attorney-apostille-australia.html">Apostille</a></li>
-    <li><a href="websites.html">Websites</a></li>
-    <li><a href="concierge.html">Concierge</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
 
 <main>
 
@@ -194,23 +201,63 @@
 
 </main>
 
-<footer class="foot">
+<footer class="closing">
   <div class="wrap">
-    <ul>
-      <li><a href="property.html">Property</a></li>
-      <li><a href="power-of-attorney-apostille-australia.html">Apostille</a></li>
-      <li><a href="websites.html">Websites</a></li>
-      <li><a href="concierge.html">Concierge</a></li>
-      <li><a href="articles.html">Articles</a></li>
-      <li><a href="heidelberg.html">Heidelberg</a></li>
-      <li><a href="avvocati.html" hreflang="it" lang="it">Per avvocati</a></li>
-      <li><a href="ayuda-comunidad-latina.html" hreflang="es" lang="es">En español</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    Luna Dreyer Translation. German, English, Spanish, Italian, Portuguese.
+    <div class="foot">
+      <div class="about">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>Luna Dreyer</span></a>
+        <p>Translation agency. Trained in Europe, working from Australia.</p>
+        <p><a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a></p>
+      </div>
+      <div>
+        <h3>Sections</h3>
+        <ul>
+          <li><a href="property.html">Property</a></li>
+          <li><a href="power-of-attorney-apostille-australia.html">Apostille</a></li>
+          <li><a href="websites.html">Websites</a></li>
+          <li><a href="concierge.html">Concierge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Guides</h3>
+        <ul>
+          <li><a href="power-of-attorney-italy-property.html">Power of attorney for Italy</a></li>
+          <li><a href="power-of-attorney-property-greece.html">Power of attorney for Greece</a></li>
+          <li><a href="discover-spain.html">Discover Spain</a></li>
+          <li><a href="discover-portugal.html">Discover Portugal</a></li>
+          <li><a href="articles.html">All articles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li><a href="heidelberg.html">Heidelberg</a></li>
+          <li><a href="avvocati.html" lang="it">Per avvocati</a></li>
+          <li><a href="ayuda-comunidad-latina.html" lang="es">En espa&ntilde;ol</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Luna Dreyer Translation. Spanish, German, Italian, Portuguese, Catalan, English, Greek, Maltese.</span>
+      <span>Translation agency, Australia</span>
+    </div>
   </div>
 </footer>
 
 <script src="attribution.js" defer></script>
+<script>
+  (function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+    var openLabel = toggle.getAttribute('data-close') || 'Close', closedLabel = toggle.textContent;
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? openLabel : closedLabel;
+    });
+  })();
+</script>
 </body>
 </html>
