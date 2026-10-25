@@ -94,6 +94,7 @@ strong{font-weight:600}
 .chain li.mine{background:var(--dark);border-color:var(--dark);color:#fff}
 .chain li.mine::before{background:var(--blue);color:#fff}
 .chain li.mine p{color:#c4c7cd}
+.chain li.mine a{color:#b9cdee}
 
 /* key facts */
 .facts{margin:2.25rem 0 0;padding:clamp(22px,3vw,32px);background:var(--dark);color:#fff;border-radius:var(--radius-lg);display:grid;gap:.3rem 2rem}
