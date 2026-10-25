@@ -287,6 +287,23 @@ section{padding:clamp(64px,9vw,110px) 0}
   .closing{border-radius:26px 26px 0 0}
   .faq details p{padding-right:0}
 }
+/* hero section tiles: the four sections, front and centre on phones */
+.hero-tiles{display:none}
+@media (max-width:700px){
+  .hero-copy h1{font-size:2.5rem}
+  .hero-copy{display:flex;flex-direction:column}
+  .hero-copy .lede,.hero-copy .cta-row .btn-dark-ghost{display:none}
+  .hero-copy .hero-tiles{order:2}
+  .hero-copy .cta-row{order:3;margin-top:14px}
+  .hero-copy .cta-row .btn-primary{flex:1 1 100%}
+  .hero-grid{padding-top:36px;gap:28px}
+  .hero-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+  .tile-link{position:relative;min-height:132px;border-radius:18px;overflow:hidden;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;text-decoration:none;
+    background:linear-gradient(180deg,rgba(20,20,22,0) 25%,rgba(20,20,22,.82) 100%),var(--img,none) center/cover no-repeat,linear-gradient(160deg,#3a4458,#1e1f22)}
+  .tile-link strong{font-size:1.12rem;font-weight:600;letter-spacing:-.01em}
+  .tile-link span{font-size:.86rem;color:#d7dae0;margin-top:2px}
+  .tile-link:active{transform:scale(.98)}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important}
@@ -320,12 +337,18 @@ section{padding:clamp(64px,9vw,110px) 0}
 
     <div class="hero-grid" id="main">
       <div class="hero-copy">
-        <h1><span class="grad">Translations</span> for documents that must satisfy a European authority</h1>
+        <h1><span class="grad">Your documents</span>, ready for Europe.</h1>
         <p class="lede">Most translation work runs the other way. Ours takes Australian documents to Europe: powers of attorney, Italian property purchases, and the paperwork Italian lawyers need for Australian clients. Trained in Europe, practising in Australia.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="contact.html">Get in touch</a>
           <a class="btn btn-dark-ghost" href="#how">How it works</a>
         </div>
+        <nav class="hero-tiles" aria-label="Sections">
+          <a class="tile-link" href="property.html" style="--img:url('https://images.pexels.com/photos/32179374/pexels-photo-32179374.jpeg?auto=compress&cs=tinysrgb&w=900')"><strong>Property</strong><span>Summers in Europe</span></a>
+          <a class="tile-link" href="power-of-attorney-apostille-australia.html" style="--img:url('media/apostille-certificate-desk-law-books.jpg')"><strong>Apostille</strong><span>Powers of attorney</span></a>
+          <a class="tile-link" href="websites.html" style="--img:url('media/concepts/cabinets-desktop.webp')"><strong>Websites</strong><span>Built and translated</span></a>
+          <a class="tile-link" href="concierge.html" style="--img:url('https://images.pexels.com/photos/30539330/pexels-photo-30539330.jpeg?auto=compress&cs=tinysrgb&w=900')"><strong>Concierge</strong><span>Everyday help</span></a>
+        </nav>
       </div>
       <div class="strips">
         <div class="strip s1"><img src="luna-portrait.jpg" alt="Luna Dreyer, translator" width="720" height="900"></div>
