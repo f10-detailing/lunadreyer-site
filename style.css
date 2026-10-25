@@ -192,3 +192,8 @@ padding-left:1rem;border-left:2px solid var(--rule)}
 .more-concepts summary:hover{background:var(--navy);color:#fff}
 .more-concepts[open] summary{display:none}
 .more-concepts > .concept:first-of-type{margin-top:0}
+
+/* Language switcher on the power of attorney pages */
+.lang-switch{margin-top:1.75rem !important;font-size:.88rem;color:var(--navy-soft)}
+.lang-switch a{white-space:nowrap}
+.lang-switch strong{color:var(--navy);font-weight:600;white-space:nowrap}
