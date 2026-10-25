@@ -267,3 +267,17 @@ a.place:hover h3{color:var(--blue)}
 .place-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(255,196,120,.22) 0%,rgba(255,170,90,.06) 45%,rgba(40,30,60,.18) 100%);mix-blend-mode:soft-light}
 .place-photo::before{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 60px rgba(30,20,10,.18)}
+
+/* "Make your dream come true": national property portals on each Discover page */
+.dream{background:var(--dark);color:#fff;border-radius:var(--radius-xl);margin:clamp(24px,4vw,48px) clamp(0px,1.2vw,16px) 0;padding:clamp(48px,7vw,88px) 0}
+.dream h2{color:#fff}
+.dream .lede{color:#c4c7cd !important}
+.portals{display:grid;gap:12px;margin-top:2rem}
+@media(min-width:46rem){.portals{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:68rem){.portals{grid-template-columns:repeat(4,1fr)}}
+.portal{display:flex;flex-direction:column;gap:4px;padding:20px 22px;border-radius:var(--radius);background:var(--dark-2);border:1px solid #2e3035;color:#fff;text-decoration:none;transition:border-color .2s,background .2s}
+.portal:hover{border-color:var(--blue);background:#24262b;color:#fff}
+.portal strong{font-size:1.1rem;font-weight:600}
+.portal strong::after{content:" \2197";color:#8fb0e0;font-weight:400}
+.portal span{font-size:.92rem;color:var(--dark-text)}
+@media (max-width:560px){.dream{border-radius:26px;margin-inline:0}}
