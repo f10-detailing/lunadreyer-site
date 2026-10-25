@@ -218,3 +218,41 @@ strong{font-weight:600}
   html{scroll-behavior:auto}
   *{transition:none!important}
 }
+
+/* Inspirational photo layouts (Property section). Each photo is a CSS background,
+   so a missing image falls back to the warm gradient instead of a broken icon. */
+.hero.hero-photo{position:relative;overflow:hidden;min-height:clamp(420px,62vh,640px);display:flex;align-items:flex-end;
+  background:var(--img,none) center/cover no-repeat,linear-gradient(160deg,#e9d9bf 0%,#9fb2cc 55%,#2c3a52 100%)}
+.hero.hero-photo h1{max-width:18ch;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.hero.hero-photo p{color:#e6e7ea}
+.places{display:grid;gap:16px;margin-top:2.5rem}
+@media(min-width:46rem){.places{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:68rem){.places{grid-template-columns:repeat(3,1fr)}}
+.place{background:var(--soft);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.section.alt .place{background:#fff}
+.place-photo{aspect-ratio:4/3;background:var(--img,none) center/cover no-repeat,linear-gradient(160deg,#e9d9bf 0%,#c9b48f 40%,#7d8ea6 100%)}
+.place-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.place-tag{font-size:.8rem;color:var(--blue);margin-bottom:6px}
+.place h3{margin:0 0 .5rem !important;font-size:1.2rem}
+.place p{margin:0 !important;color:var(--muted);font-size:.95rem;max-width:none}
+.place .more{margin-top:auto !important;padding-top:14px;font-weight:500;font-size:.92rem;color:var(--blue)}
+a.place:hover h3{color:var(--blue)}
+.places.wide{grid-template-columns:1fr}
+@media(min-width:46rem){.places.wide{grid-template-columns:repeat(2,1fr)}}
+.places.wide .place-photo{aspect-ratio:16/10}
+.season{display:grid;gap:16px;margin-top:2.5rem}
+@media(min-width:46rem){.season{grid-template-columns:repeat(3,1fr)}}
+.season div{background:var(--dark);color:#fff;border-radius:var(--radius-lg);padding:26px}
+.season strong{display:block;font-size:1.6rem;font-weight:500;letter-spacing:-.02em;margin-bottom:6px}
+.season p{margin:0 !important;color:#c4c7cd;font-size:.95rem}
+.band{background:var(--soft-blue);border-radius:var(--radius-lg);padding:clamp(22px,3vw,32px);margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between}
+.band p{margin:0 !important;max-width:40rem}
+/* Background video in photo heroes: hidden until it actually plays, so a missing
+   file or reduced-motion setting simply leaves the photo or gradient underneath */
+.hero.hero-photo > .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;z-index:0}
+.hero.hero-photo > .hero-video.is-playing{opacity:1}
+.hero.hero-photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,20,22,.1) 0%,rgba(20,20,22,.3) 45%,rgba(20,20,22,.85) 100%);pointer-events:none}
+.hero.hero-photo > .wrap{position:relative;z-index:2}
+.place-photo{position:relative;overflow:hidden}
+.place-photo > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s}
+.place-photo > video.is-playing{opacity:1}
