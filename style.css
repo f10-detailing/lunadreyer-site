@@ -259,3 +259,11 @@ a.place:hover h3{color:var(--blue)}
 .place-photo > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s}
 .place-photo > video.is-playing{opacity:1}
 .chain .by-us{display:inline-block;margin-left:10px;vertical-align:middle;font-size:.72rem;font-weight:500;letter-spacing:0;padding:3px 10px;border-radius:999px;background:var(--blue);color:#fff}
+
+/* One colour grade for every travel photo, so pictures from different photographers
+   read as one set: warm, slightly richer, gently faded blacks, golden light from the top */
+.place-photo{filter:saturate(1.12) contrast(1.04) brightness(1.03) sepia(.1)}
+.hero.hero-photo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,190,110,.2) 0%,rgba(255,170,90,.05) 50%,rgba(40,30,60,.15) 100%);mix-blend-mode:soft-light}
+.place-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,196,120,.22) 0%,rgba(255,170,90,.06) 45%,rgba(40,30,60,.18) 100%);mix-blend-mode:soft-light}
+.place-photo::before{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 60px rgba(30,20,10,.18)}
