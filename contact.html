@@ -11,11 +11,11 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get in touch | Luna Dreyer, Translator</title>
+<title>Contact | Luna Dreyer Translation</title>
 <meta name="description" content="Tell Luna Dreyer what your power of attorney or document is for and which country it is going to. Enquiries are sent directly to mail@lunadreyer.com.au.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luna Dreyer Translation">
-<meta property="og:title" content="Get in touch | Luna Dreyer, Translator">
+<meta property="og:title" content="Contact | Luna Dreyer Translation">
 <meta property="og:description" content="Tell Luna Dreyer what your power of attorney or document is for and which country it is going to. Enquiries are sent directly to mail@lunadreyer.com.au.">
 <meta property="og:url" content="https://lunadreyer.com.au/contact.html">
 <meta property="og:image" content="https://lunadreyer.com.au/media/share-translator.jpg">
@@ -105,8 +105,8 @@
       </div>
 
       <div class="field">
-        <label for="location">Your location</label>
-        <input id="location" name="location" type="text" required autocomplete="address-level2" placeholder="e.g. Melbourne, VIC">
+        <label for="location">Your location <span class="opt">(optional)</span></label>
+        <input id="location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Melbourne, VIC">
       </div>
 
       <div class="field-row">
@@ -118,6 +118,9 @@
             <option>Germany</option>
             <option>Spain</option>
             <option>Portugal</option>
+            <option>Greece</option>
+            <option>Cyprus</option>
+            <option>Malta</option>
             <option>Other</option>
           </select>
         </div>
@@ -131,14 +134,16 @@
             <option>Banking, tax or a financial matter</option>
             <option>Company or business matter</option>
             <option>Court or legal representation</option>
+            <option>Citizenship, marriage, study or work documents</option>
+            <option>NAATI certified translation</option>
             <option>Not sure / other</option>
           </select>
         </div>
       </div>
 
       <div class="field">
-        <label for="message">Tell us more</label>
-        <textarea id="message" name="message" rows="6" required placeholder="What the document is, who is asking for it (a lawyer, notary, registry, bank), and your timeframe."></textarea>
+        <label for="message">Tell us more <span class="opt">(optional)</span></label>
+        <textarea id="message" name="message" rows="6" placeholder="What the document is, who is asking for it (a lawyer, notary, registry, bank), and your timeframe."></textarea>
       </div>
 
       <button type="submit" class="submit">Send enquiry</button>
@@ -146,7 +151,7 @@
 
       <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
 
-      <p class="note">This form sends directly to our inbox. If you would rather email straight away, write to <a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>. We read every enquiry ourselves and reply by email, usually within one to two business days.</p>
+      <p class="note">This form sends directly to our inbox. If you would rather email straight away, write to <a href="mailto:mail@lunadreyer.com.au">mail@lunadreyer.com.au</a>. We read every enquiry ourselves and reply by email, usually within one business day.</p>
     </form>
 
   </div>
@@ -169,6 +174,7 @@
           <li><a href="power-of-attorney-apostille-australia.html">Apostille</a></li>
           <li><a href="websites.html">Websites</a></li>
           <li><a href="concierge.html">Concierge</a></li>
+          <li><a href="power-of-attorney-planner.html">Free planner</a></li>
         </ul>
       </div>
       <div>
@@ -203,6 +209,10 @@
   var ACCESS_KEY = "f109b614-c5ff-44ee-867f-0df1f5753f38";
   var form = document.getElementById("enquiry-form");
   var status = document.getElementById("form-status");
+  try {
+    var qc = new URLSearchParams(location.search).get("country");
+    if (qc) { for (var i = 0; i < form.country.options.length; i++) { if (form.country.options[i].text.toLowerCase() === qc.toLowerCase()) form.country.selectedIndex = i; } }
+  } catch (err) {}
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -239,7 +249,8 @@
         if (json.success) {
           form.reset();
           fieldsBox.hidden = true;
-          status.textContent = "Thank you, your enquiry has been sent. We will reply by email.";
+          status.textContent = "Thank you, your enquiry has been sent. We reply by email, usually within one business day.";
+          if (window.gtag) gtag("event","generate_lead",{form:"contact"});
           status.className = "form-status success";
           status.hidden = false;
         } else {
@@ -273,5 +284,6 @@
     });
   })();
 </script>
+<script src="callback.js" defer></script>
 </body>
 </html>
