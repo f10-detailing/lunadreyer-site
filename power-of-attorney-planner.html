@@ -221,7 +221,7 @@
   var ACCESS_KEY = "f109b614-c5ff-44ee-867f-0df1f5753f38";
   var C = {
     italy: {name:"Italy", doc:"procura speciale", lang:"Italian", official:"notaio", deed:"the rogito, the deed of sale",
-      asks:["A codice fiscale, the Italian tax code, for the buyer or heir","A valid passport, checked against the details in the procura","For an auction, an Italian lawyer (avvocato) who bids for you under the procura"],
+      asks:["A codice fiscale, the Italian tax code, for the buyer or heir","A valid passport, checked against the details in the procura","For an auction, an Italian lawyer (avvocato) to bid for you: your own, or one of our partner lawyers in Italy"],
       guide:["buying-property-italy-from-australia.html","Buying property in Italy from Australia"]},
     spain: {name:"Spain", doc:"poder notarial", lang:"Spanish", official:"notario", deed:"the escritura de compraventa",
       asks:["An NIE, the foreigner identity number, for the buyer or heir","A Spanish bank account for the purchase funds and taxes","Registration of the deed at the Registro de la Propiedad"],
@@ -233,7 +233,7 @@
       asks:["An AFM, the Greek tax number, for the buyer or heir","A Greek bank account for the purchase funds and taxes","Registration at the Hellenic Cadastre"],
       guide:["power-of-attorney-property-greece.html","Power of attorney for property in Greece"]},
     cyprus: {name:"Cyprus", doc:"power of attorney (πληρεξούσιο)", lang:"Greek", official:"Cypriot lawyer", deed:"the sale contract, stamped and deposited at the Land Registry",
-      asks:["A TIC, the Cyprus tax identification code, for the buyer or heir","A Cypriot bank account for the purchase funds","Deposit of the contract at the Department of Lands and Surveys"],
+      asks:["A Cypriot lawyer for the contract: your own, or one of our partner lawyers in Cyprus","A TIC, the Cyprus tax identification code, for the buyer or heir","A Cypriot bank account for the purchase funds","Deposit of the contract at the Department of Lands and Surveys"],
       guide:["discover-cyprus.html","Discover Cyprus"]},
     malta: {name:"Malta", doc:"prokura", lang:"Maltese or English", official:"Maltese notary (nutar)", deed:"the konvenju (promise of sale) and the final deed",
       asks:["For buyers from outside the EU, an AIP permit, unless the property is in a Special Designated Area","A Maltese bank account for the purchase funds and taxes","Registration of the deed by the nutar at the Public Registry"],
@@ -251,7 +251,7 @@
   function fmt(d){ return d.toLocaleDateString("en-AU",{weekday:"short",day:"numeric",month:"long",year:"numeric"}); }
   function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
   function finalStep(c,p,k){
-    if (p==="auction") return k==="italy" ? "An Italian lawyer bids for you at the auction under the procura." : "Your lawyer bids for you at the auction under the power of attorney.";
+    if (p==="auction") return k==="italy" ? "An Italian lawyer bids for you at the auction under the procura: your own, or one of our partner lawyers, introduced by us." : "A lawyer in "+c.name+" bids for you under the power of attorney: your own, or one of our partner lawyers, introduced by us.";
     if (p==="selling") return "Your representative signs the sale deed for you before the "+c.official+" in "+c.name+".";
     if (p==="inheritance") return "Your representative completes the inheritance steps for you before the "+c.official+" in "+c.name+".";
     return "Your representative signs "+c.deed+" for you before the "+c.official+" in "+c.name+".";
