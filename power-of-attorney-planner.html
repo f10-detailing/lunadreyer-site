@@ -24,7 +24,8 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Power of attorney planner for Europe", "url": "https://lunadreyer.com.au/power-of-attorney-planner.html", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "description": "Free planner: pick the country, purpose and deed date to see every step of your power of attorney from Australia, the day to start and what the notary needs.", "provider": {"@type": "ProfessionalService", "name": "Luna Dreyer Translation", "url": "https://lunadreyer.com.au/", "taxID": "93 449 646 136"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a power of attorney from Australia take?", "acceptedAnswer": {"@type": "Answer", "text": "Usually one to three weeks from the approval of the text. We book the Australian Notary Public usually within the week, take the signed document to DFAT ourselves for the apostille and courier the original overseas with a scan the same day."}}, {"@type": "Question", "name": "How much does an apostille cost in Australia?", "acceptedAnswer": {"@type": "Answer", "text": "DFAT charges A$105 for each apostille from 1 January 2026. We quote the whole route, drafting, translation, notary booking, apostille and courier, at a fixed price agreed in advance."}}, {"@type": "Question", "name": "Is it possible to buy property in Europe without travelling?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. With a power of attorney signed once in Australia, someone you trust signs the deed for you before the notary overseas. We prepare it to that notary's wording so it is accepted the first time."}}, {"@type": "Question", "name": "Which countries accept an Australian apostille?", "acceptedAnswer": {"@type": "Answer", "text": "Every member of the Hague Apostille Convention, including Italy, Spain, Portugal, Greece, Cyprus, Malta and Germany. No further legalisation is needed for use in those countries."}}]}</script>
 <style>
-.planner-form{max-width:44rem}
+.planner-form{max-width:none}
+.planner-form .field-row{max-width:44rem}
 .plan{margin-top:2.5rem;max-width:52rem}
 .plan-head h3{font-size:1.4rem;margin:0 0 .8rem}
 .plan .timing{padding:14px 18px;border-radius:12px;background:var(--soft-blue);font-size:.98rem;margin:0}
@@ -37,6 +38,25 @@
 .btn-light-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
 .btn-light-ghost:hover{border-color:var(--ink)}
 .lede-sm{color:var(--muted);max-width:40rem;margin-top:.8rem}
+.country-pick{border:0;margin:0;padding:0;min-width:0}
+.country-pick legend{font-size:.88rem;font-weight:500;margin-bottom:.6rem;padding:0}
+.cp-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+@media(max-width:900px){.cp-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.cp-grid{grid-template-columns:repeat(2,1fr)}.cp-photo{aspect-ratio:4/3}}
+.cp{position:relative;display:block;border-radius:18px;overflow:hidden;cursor:pointer;background:var(--soft);outline:3px solid transparent;outline-offset:2px}
+.cp input,.cp-chip input{position:absolute;opacity:0;width:1px;height:1px}
+.cp-photo{display:block;aspect-ratio:3/4;background:var(--img,none) center/cover no-repeat,linear-gradient(160deg,#e9d9bf 0%,#c9b48f 40%,#7d8ea6 100%);filter:saturate(1.12) contrast(1.04) brightness(1.03) sepia(.1);transition:transform .4s}
+.cp:hover .cp-photo{transform:scale(1.04)}
+.cp-name{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;color:#fff;font-weight:600;background:linear-gradient(180deg,rgba(20,20,22,0),rgba(20,20,22,.75))}
+.cp:has(input:checked){outline-color:var(--blue)}
+.cp:has(input:checked) .cp-name::after{content:"";display:inline-block;width:16px;height:16px;margin-left:8px;vertical-align:-2px;border-radius:50%;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3L11.5 5.8' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.cp:focus-within,.cp-chip:focus-within span{outline:3px solid #8fb0e0;outline-offset:2px}
+.cp-more{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.cp-chip span{display:inline-block;padding:9px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.92rem;cursor:pointer}
+.cp-chip:has(input:checked) span{background:var(--blue);border-color:var(--blue);color:#fff}
+.lead-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center}
+.lead-photo{border-radius:var(--radius-xl);aspect-ratio:4/5;background:var(--img,none) center/cover no-repeat,linear-gradient(160deg,#e9d9bf 0%,#c9b48f 40%,#7d8ea6 100%);filter:saturate(1.12) contrast(1.04) brightness(1.03) sepia(.1)}
+@media(max-width:800px){.lead-grid{grid-template-columns:1fr}.lead-photo{aspect-ratio:16/10}}
 </style>
 </head>
 <body>
@@ -67,7 +87,7 @@
 
 <main>
 
-<section class="hero">
+<section class="hero hero-photo" style="--img:url('https://images.pexels.com/photos/30539330/pexels-photo-30539330.jpeg?auto=compress&cs=tinysrgb&w=1920')">
   <div class="wrap">
     <span class="eyebrow">Free planner</span>
     <h1>Power of attorney planner: sign in Australia, buy in Europe.</h1>
@@ -80,20 +100,22 @@
     <h2>Plan your power of attorney</h2>
     <form id="planner-form" class="enquiry planner-form" novalidate>
       <div class="fields">
-        <div class="field-row">
-          <div class="field">
-            <label for="p-country">Country</label>
-            <select id="p-country" name="country" required>
-              <option value="italy">Italy</option>
-              <option value="spain">Spain</option>
-              <option value="portugal">Portugal</option>
-              <option value="greece">Greece</option>
-              <option value="cyprus">Cyprus</option>
-              <option value="malta">Malta</option>
-              <option value="germany">Germany</option>
-              <option value="other">Another country</option>
-            </select>
+        <fieldset class="country-pick">
+          <legend>Where is the property?</legend>
+          <div class="cp-grid">
+            <label class="cp"><input type="radio" name="country" value="italy" checked><span class="cp-photo" role="img" aria-label="A family dinner at a long table outdoors in the Italian countryside at sunset" style="--img:url('https://images.pexels.com/photos/30539330/pexels-photo-30539330.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Italy</span></label>
+            <label class="cp"><input type="radio" name="country" value="spain"><span class="cp-photo" role="img" aria-label="A sunny Mediterranean beach and old town on the Spanish coast" style="--img:url('https://images.pexels.com/photos/15138932/pexels-photo-15138932.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Spain</span></label>
+            <label class="cp"><input type="radio" name="country" value="portugal"><span class="cp-photo" role="img" aria-label="Golden cliffs and a turquoise cove on the Algarve coast" style="--img:url('https://images.pexels.com/photos/5943833/pexels-photo-5943833.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Portugal</span></label>
+            <label class="cp"><input type="radio" name="country" value="greece"><span class="cp-photo" role="img" aria-label="Whitewashed houses and blue domes above the Aegean at sunset" style="--img:url('https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Greece</span></label>
+            <label class="cp"><input type="radio" name="country" value="cyprus"><span class="cp-photo" role="img" aria-label="A harbour in Paphos with fishing boats at golden hour" style="--img:url('https://images.pexels.com/photos/36149762/pexels-photo-36149762.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Cyprus</span></label>
+            <label class="cp"><input type="radio" name="country" value="malta"><span class="cp-photo" role="img" aria-label="Honey coloured Valletta and its harbour on a summer evening" style="--img:url('https://images.pexels.com/photos/8909170/pexels-photo-8909170.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Malta</span></label>
           </div>
+          <div class="cp-more">
+            <label class="cp-chip"><input type="radio" name="country" value="germany"><span>Germany</span></label>
+            <label class="cp-chip"><input type="radio" name="country" value="other"><span>Another country</span></label>
+          </div>
+        </fieldset>
+        <div class="field-row">
           <div class="field">
             <label for="p-purpose">What you are doing</label>
             <select id="p-purpose" name="purpose" required>
@@ -103,10 +125,10 @@
               <option value="inheritance">Inheriting a property</option>
             </select>
           </div>
-        </div>
-        <div class="field">
-          <label for="p-date">Date of the deed or auction <span class="opt">(optional)</span></label>
-          <input id="p-date" name="date" type="date">
+          <div class="field">
+            <label for="p-date">Date of the deed or auction <span class="opt">(optional)</span></label>
+            <input id="p-date" name="date" type="date">
+          </div>
         </div>
         <button type="submit" class="submit">Show my plan</button>
       </div>
@@ -118,7 +140,9 @@
 </section>
 
 <section class="section alt" id="lead">
-  <div class="wrap">
+  <div class="wrap lead-grid">
+    <div class="lead-photo" role="img" aria-label="An Australian apostille certificate on a sunny Italian lunch table with lemons, figs and flowers" style="--img:url('media/apostille-certificate-salerno-lunch-table.jpg')"></div>
+    <div>
     <h2>Get this plan by email, with a fixed quote</h2>
     <p class="lede-sm">We send your plan, the checklist of documents for your country and a fixed price for the whole route, usually within one business day.</p>
     <form id="lead-form" class="enquiry" autocomplete="on">
@@ -142,6 +166,7 @@
       </div>
       <p id="lead-status" class="form-status" role="status" aria-live="polite" hidden></p>
     </form>
+    </div>
   </div>
 </section>
 
