@@ -363,6 +363,13 @@
     if (window.gtag) gtag("event","planner_generate",{country:c.name,purpose:p});
   }
   form.addEventListener("submit",function(e){ e.preventDefault(); render(); plan.scrollIntoView({behavior:"smooth",block:"start"}); });
+  try {
+    var q=new URLSearchParams(location.search), qc=(q.get("country")||"").toLowerCase(), qp=(q.get("purpose")||"").toLowerCase();
+    var r=qc && form.querySelector('input[name="country"][value="'+qc.replace(/[^a-z]/g,"")+'"]');
+    if (r) r.checked=true;
+    if (qp && P[qp]) form.purpose.value=qp;
+    if (r) { render(); }
+  } catch(err){}
 
   var lead=document.getElementById("lead-form"), st=document.getElementById("lead-status");
   lead.addEventListener("submit",function(e){
