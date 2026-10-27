@@ -57,6 +57,32 @@
 .lead-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center}
 .lead-photo{border-radius:var(--radius-xl);aspect-ratio:4/5;background:var(--img,none) center/cover no-repeat,linear-gradient(160deg,#e9d9bf 0%,#c9b48f 40%,#7d8ea6 100%);filter:saturate(1.12) contrast(1.04) brightness(1.03) sepia(.1)}
 @media(max-width:800px){.lead-grid{grid-template-columns:1fr}.lead-photo{aspect-ratio:16/10}}
+.planner-hero{background:radial-gradient(120% 90% at 85% 10%,rgba(201,191,165,.22) 0%,rgba(20,20,22,0) 55%),radial-gradient(90% 80% at 0% 100%,rgba(61,114,196,.25) 0%,rgba(20,20,22,0) 60%),var(--dark)}
+.ph-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,72px);align-items:center}
+.planner-hero h1{max-width:16ch}
+.planner-hero p{color:#c4c7cd;max-width:34em}
+.planner-hero .ph-cta{margin-top:1.8rem;color:#fff}
+.route-card{margin:0;background:#fbfaf7;color:var(--ink);border-radius:26px;padding:22px 22px 18px;box-shadow:0 30px 70px rgba(0,0,0,.45);transform:rotate(1.5deg);position:relative;overflow:hidden}
+.route-card::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#8fa8c8,#c9bfa5)}
+.rc-top,.rc-foot{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.rc-top{padding:6px 2px 16px;border-bottom:1px dashed #d9d6cc}
+.rc-code{display:block;font-size:1.9rem;font-weight:600;letter-spacing:.02em;line-height:1}
+.rc-city,.rc-foot span{display:block;font-size:.78rem;color:var(--muted);margin-top:4px}
+.rc-right{text-align:right}
+.rc-plane{flex:1;height:2px;background:repeating-linear-gradient(90deg,#c9bfa5 0 6px,transparent 6px 12px);position:relative;margin:0 6px}
+.rc-plane::after{content:"";position:absolute;right:-4px;top:-7px;width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233d72c4' d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z' transform='rotate(90 12 12)'/%3E%3C/svg%3E") center/16px no-repeat}
+.rc-steps{list-style:none;margin:14px 0;padding:0;counter-reset:rc}
+.rc-steps li{counter-increment:rc;display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid #efece4;font-size:.9rem;position:relative}
+.rc-steps li::before{content:counter(rc);flex:0 0 26px;height:26px;border-radius:50%;background:var(--dark);color:#fff;font-size:.75rem;display:flex;align-items:center;justify-content:center}
+.rc-steps b{font-weight:500;flex:1}
+.rc-steps em{font-style:normal;font-size:.72rem;font-weight:600;color:#fff;background:var(--blue);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.rc-steps li.rc-end::before{background:var(--blue)}
+.rc-steps li:last-child{border-bottom:0}
+.rc-steps li.rc-end em{background:#c9bfa5;color:var(--ink)}
+.rc-foot{padding-top:14px;border-top:1px dashed #d9d6cc}
+.rc-foot strong{display:block;font-size:1.15rem;font-weight:600}
+@media(max-width:900px){.ph-grid{grid-template-columns:1fr}.route-card{transform:none;max-width:30rem}}
+@media(max-width:560px){.ph-cta{display:none}.route-card{padding:18px 16px 14px}.rc-code{font-size:1.5rem}.rc-steps li{font-size:.85rem}}
 </style>
 </head>
 <body>
@@ -87,11 +113,33 @@
 
 <main>
 
-<section class="hero hero-photo" style="--img:url('https://images.pexels.com/photos/30539330/pexels-photo-30539330.jpeg?auto=compress&cs=tinysrgb&w=1920')">
-  <div class="wrap">
-    <span class="eyebrow">Free planner</span>
-    <h1>Power of attorney planner: sign in Australia, buy in Europe.</h1>
-    <p>Choose the country, what you are doing there and the date of your deed or auction. The planner shows every step of your power of attorney, the date to start, and what the notary overseas will ask for. Free, instant, no sign up.</p>
+<section class="hero planner-hero">
+  <div class="wrap ph-grid">
+    <div>
+      <span class="eyebrow">Free planner</span>
+      <h1>Power of attorney planner: sign in Australia, buy in Europe.</h1>
+      <p>Choose the country, what you are doing there and the date of your deed or auction. The planner shows every step of your power of attorney, the date to start, and what the notary overseas will ask for. Free, instant, no sign up.</p>
+      <a class="btn btn-primary ph-cta" href="#planner">Plan my power of attorney</a>
+    </div>
+    <figure class="route-card" aria-label="Example plan: buying in Italy, deed on 12 December, start by 14 November">
+      <div class="rc-top">
+        <div><span class="rc-code">MEL</span><span class="rc-city">Melbourne</span></div>
+        <span class="rc-plane" aria-hidden="true"></span>
+        <div class="rc-right"><span class="rc-code">ITA</span><span class="rc-city">Your deed in Italy</span></div>
+      </div>
+      <ol class="rc-steps">
+        <li><b>Wording agreed with your notaio</b><em>Done by us</em></li>
+        <li><b>Procura in Italian and English</b><em>Done by us</em></li>
+        <li><b>Australian Notary Public</b><em>Within the week</em></li>
+        <li><b>DFAT apostille</b><em>Done by us</em></li>
+        <li><b>Courier to Italy, scan the same day</b><em>Done by us</em></li>
+        <li class="rc-end"><b>Your representative signs the rogito</b><em>12 Dec</em></li>
+      </ol>
+      <div class="rc-foot">
+        <div><span>Example plan</span><strong>Buying in Italy</strong></div>
+        <div class="rc-right"><span>Start by</span><strong>14 Nov</strong></div>
+      </div>
+    </figure>
   </div>
 </section>
 
