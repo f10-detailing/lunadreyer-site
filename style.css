@@ -281,3 +281,15 @@ a.place:hover h3{color:var(--blue)}
 .portal strong::after{content:" \2197";color:#8fb0e0;font-weight:400}
 .portal span{font-size:.92rem;color:var(--dark-text)}
 @media (max-width:560px){.dream{border-radius:26px;margin-inline:0}}
+
+/* property portals as inspiration cards */
+.portal-cards{display:grid;gap:16px;margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.portal-card{display:flex;flex-direction:column;border-radius:var(--radius-lg);overflow:hidden;background:var(--dark-2);border:1px solid #2e3035;color:#fff;text-decoration:none;transition:border-color .2s}
+.portal-card:hover{border-color:var(--blue);color:#fff}
+.pc-photo{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--img,none) center/cover no-repeat,linear-gradient(160deg,#e9d9bf 0%,#c9b48f 40%,#7d8ea6 100%);filter:saturate(1.12) contrast(1.04) brightness(1.03) sepia(.1);transition:transform .4s}
+.portal-card:hover .pc-photo{transform:scale(1.03)}
+.pc-body{display:flex;flex-direction:column;gap:6px;padding:18px 20px 22px}
+.pc-body strong{font-size:1.15rem;font-weight:600;line-height:1.25}
+.pc-body strong::after{content:" \2197";color:#8fb0e0;font-weight:400}
+.pc-body span{font-size:.92rem;color:var(--dark-text)}
+.portal-cards:has(> .portal-card:nth-child(2):last-child) .pc-photo{aspect-ratio:16/9}
