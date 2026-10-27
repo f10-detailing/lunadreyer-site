@@ -11,13 +11,13 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Translations for European Authorities | Luna Dreyer Translation</title>
-<meta name="description" content="Translation and facilitation for legal documents in Europe: powers of attorney, apostille and property purchases in Italy, Spain and Greece, from Australia.">
+<title>Buying in Europe from Australia: POA in a Week | Luna Dreyer</title>
+<meta name="description" content="Buying in Italy, Spain, Greece or Portugal from Australia? We prepare your power of attorney, book the notary within the week and take it to DFAT ourselves.">
 <link rel="canonical" href="https://lunadreyer.com.au/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luna Dreyer Translation">
-<meta property="og:title" content="Translations for European Authorities | Luna Dreyer Translation">
-<meta property="og:description" content="Translations of Australian documents for European authorities, from a translation agency based in Australia.">
+<meta property="og:title" content="Buying in Europe from Australia: POA in a Week | Luna Dreyer">
+<meta property="og:description" content="Buying in Italy, Spain, Greece or Portugal from Australia? We prepare your power of attorney, book the notary within the week and take it to DFAT ourselves.">
 <meta property="og:url" content="https://lunadreyer.com.au/">
 <meta property="og:image" content="https://lunadreyer.com.au/luna-portrait.jpg">
 <meta name="theme-color" content="#141416">
@@ -51,11 +51,15 @@
       "email": "mail@lunadreyer.com.au",
       "founder": { "@id": "https://lunadreyer.com.au/#luna" },
       "areaServed": ["Australia", "Europe"],
-      "serviceType": ["Power of attorney translation", "Apostille support", "Translation for Italian property purchases", "Translation for European authorities"]
+      "description": "We help Australians buy property in Europe without travelling: the power of attorney drafted to the overseas notary's wording, an Australian Notary Public booked within the week, the DFAT apostille done by us, and one contact who speaks with the agent, lawyer and notary overseas.",
+      "serviceType": ["Power of attorney for buying property overseas", "Notary Public booking within the week", "Power of attorney translation", "Apostille support", "Translation for Italian property purchases", "Translation for European authorities"]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
+        { "@type": "Question", "name": "How can Australians buy property in Europe without travelling?", "acceptedAnswer": { "@type": "Answer", "text": "With a power of attorney. You sign it once in Australia and someone you trust signs the purchase for you overseas. We prepare it to the overseas notary's wording, book the Australian Notary Public within the week, take it to DFAT for the apostille and courier it to your representative." } },
+        { "@type": "Question", "name": "How fast can a power of attorney be notarised and apostilled in Australia?", "acceptedAnswer": { "@type": "Answer", "text": "We book the Australian Notary Public usually in the same week, so you attend once and sign. We then take the document to DFAT ourselves for the apostille, without waiting for a consulate appointment." } },
+        { "@type": "Question", "name": "Who speaks with the agent, lawyer and notary overseas?", "acceptedAnswer": { "@type": "Answer", "text": "We do. We liaise with the agent, lawyer and notary in their language, Spanish, Italian, German, Catalan, Greek and more, so you have one contact in Australia for the whole purchase." } },
         { "@type": "Question", "name": "Can you confirm what the European office needs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. European requirements vary by country and by office, so confirming what the receiving office needs is the first thing we do, before any translation starts. The finished set is then prepared to match." } },
         { "@type": "Question", "name": "How does a document travel from Australia to Europe?", "acceptedAnswer": { "@type": "Answer", "text": "The usual path has five steps: settle the requirements, translate, notarise, apostille, and lodge abroad. Each step is confirmed with you before the next one starts." } },
         { "@type": "Question", "name": "Do you handle powers of attorney?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Powers of attorney are one of the main things we translate and prepare for European use. The power of attorney page explains the steps in order." } },
@@ -287,6 +291,24 @@ section{padding:clamp(64px,9vw,110px) 0}
   .closing{border-radius:26px 26px 0 0}
   .faq details p{padding-right:0}
 }
+/* buyers: hero points and benefits */
+.hero-points{list-style:none;margin:-6px 0 30px;padding:0;display:grid;gap:10px;max-width:32em}
+.hero-points li{display:flex;gap:10px;align-items:flex-start;color:#c4c7cd;font-size:.95rem;line-height:1.45}
+.hero-points li::before{content:"";flex:0 0 18px;height:18px;margin-top:2px;border-radius:50%;background:#3d72c4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.2l2.6 2.6L13 6.4' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.hero-points strong{color:#fff;font-weight:500}
+.buy{padding-bottom:0}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.benefit{background:var(--soft);border-radius:var(--radius-lg);padding:26px}
+.benefit h3{margin-bottom:10px}
+.benefit p{color:var(--muted);font-size:.95rem}
+.by-us{display:inline-block;background:var(--blue);color:#fff;font-size:.75rem;font-weight:600;border-radius:999px;padding:4px 12px;margin-bottom:14px}
+.countries{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:32px}
+.countries a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.92rem;text-decoration:none}
+.countries a:hover{border-color:var(--ink)}
+.buy-cta{justify-content:center;margin-top:28px}
+@media (max-width:900px){.benefits{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.benefits{grid-template-columns:1fr}}
+@media (max-width:700px){.hero-copy .hero-points{display:grid;order:1;margin:22px 0 0}.hero-copy .hero-tiles{order:2}}
 /* hero section tiles: the four sections, front and centre on phones */
 .hero-tiles{display:none}
 @media (max-width:700px){
@@ -337,11 +359,16 @@ section{padding:clamp(64px,9vw,110px) 0}
 
     <div class="hero-grid" id="main">
       <div class="hero-copy">
-        <h1><span class="grad">Your documents</span>, ready for Europe.</h1>
-        <p class="lede">Most translation work runs the other way. Ours takes Australian documents to Europe: powers of attorney, Italian property purchases, and the paperwork Italian lawyers need for Australian clients. Trained in Europe, practising in Australia.</p>
+        <h1><span class="grad">Buy in Europe</span> without leaving Australia.</h1>
+        <p class="lede">A power of attorney lets someone you trust sign for you overseas. We prepare it, book the Australian Notary Public within the week, take it to DFAT for the apostille ourselves and speak with the agent, lawyer and notary on the other side.</p>
+        <ul class="hero-points">
+          <li><span><strong>Signed within the week.</strong> We book the notary, you attend once and sign.</span></li>
+          <li><span><strong>Apostille done by us.</strong> We take your document to DFAT.</span></li>
+          <li><span><strong>One contact, both sides.</strong> We speak with the agent, lawyer and notary in their language.</span></li>
+        </ul>
         <div class="cta-row">
-          <a class="btn btn-primary" href="contact.html">Get in touch</a>
-          <a class="btn btn-dark-ghost" href="#how">How it works</a>
+          <a class="btn btn-primary" href="contact.html">Start your power of attorney</a>
+          <a class="btn btn-dark-ghost" href="#buy-abroad">How we help buyers</a>
         </div>
         <nav class="hero-tiles" aria-label="Sections">
           <a class="tile-link tile-property" href="property.html"><svg class="tile-ic" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fa8c8"/><stop offset="1" stop-color="#c9bfa5"/></linearGradient></defs><circle cx="46" cy="16" r="7" fill="#c9bfa5" opacity=".9"/><path d="M8 50 L8 30 L24 18 L40 30 L40 50 Z" fill="none" stroke="url(#tg)" stroke-width="2.4" stroke-linejoin="round"/><rect x="19" y="36" width="10" height="14" rx="1.5" fill="none" stroke="url(#tg)" stroke-width="2.4"/><path d="M4 56 Q14 52 24 56 T44 56 T60 56" fill="none" stroke="#3d72c4" stroke-width="2.4" stroke-linecap="round"/></svg><strong>Property</strong><span>Summers in Europe</span></a>
@@ -539,6 +566,34 @@ section{padding:clamp(64px,9vw,110px) 0}
 </header>
 
 <main>
+  <section id="buy-abroad" class="buy" aria-labelledby="buy-heading">
+    <div class="wrap">
+      <div class="center-head">
+        <span class="kicker">Buying overseas from Australia</span>
+        <h2 id="buy-heading">Your home in Europe, signed from Australia</h2>
+        <p>Found a place in Italy, Spain, Greece or Portugal? Your representative signs at the notary's desk overseas with a power of attorney, and we get that power of attorney ready fast, so the deal keeps moving.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><span class="by-us">Done by us</span><h3>Notary within the week</h3><p>We book the Australian Notary Public, usually in the same week, instead of waiting for a consulate appointment. You attend once and sign.</p></div>
+        <div class="benefit"><span class="by-us">Done by us</span><h3>Apostille at DFAT</h3><p>We take the signed document to DFAT ourselves, so it is valid in the country where you are buying.</p></div>
+        <div class="benefit"><h3>Worded for the overseas notary</h3><p>We take the text from the notary or lawyer handling your purchase, so it is accepted the first time.</p></div>
+        <div class="benefit"><h3>You know what you sign</h3><p>An English translation of every page, so you and the Australian notary understand the document in full.</p></div>
+        <div class="benefit"><h3>One contact, both sides</h3><p>We speak with the agent, lawyer and notary overseas in Spanish, Italian, German, Catalan, Greek and more.</p></div>
+        <div class="benefit"><h3>Delivered to your representative</h3><p>The original goes by tracked courier to whoever signs for you, in time for the deed.</p></div>
+      </div>
+      <nav class="countries" aria-label="Buying guides by country">
+        <a href="buying-property-italy-from-australia.html">Buying in Italy</a>
+        <a href="buying-property-spain-from-australia.html">Buying in Spain</a>
+        <a href="buying-property-portugal-from-australia.html">Buying in Portugal</a>
+        <a href="power-of-attorney-property-greece.html">Buying in Greece</a>
+        <a href="power-of-attorney-apostille-australia.html">Any other country</a>
+      </nav>
+      <div class="cta-row buy-cta">
+        <a class="btn btn-primary" href="contact.html">Tell us where you are buying</a>
+        <a class="btn btn-light-ghost" href="property.html">Find your place</a>
+      </div>
+    </div>
+  </section>
   <section aria-labelledby="intro-heading">
     <div class="wrap">
       <div class="center-head">
@@ -720,6 +775,18 @@ section{padding:clamp(64px,9vw,110px) 0}
           <p>Answers to the questions we hear most often. If yours is not here, get in touch.</p>
         </div>
         <div class="faq">
+          <details>
+            <summary>How can Australians buy property in Europe without travelling?</summary>
+            <p>With a power of attorney. You sign it once in Australia and someone you trust signs the purchase for you overseas. We prepare it to the overseas notary's wording, book the Australian Notary Public within the week, take it to DFAT for the apostille and courier it to your representative.</p>
+          </details>
+          <details>
+            <summary>How fast can a power of attorney be notarised and apostilled in Australia?</summary>
+            <p>We book the Australian Notary Public usually in the same week, so you attend once and sign. We then take the document to DFAT ourselves for the apostille, without waiting for a consulate appointment.</p>
+          </details>
+          <details>
+            <summary>Who speaks with the agent, lawyer and notary overseas?</summary>
+            <p>We do. We liaise with the agent, lawyer and notary in their language, Spanish, Italian, German, Catalan, Greek and more, so you have one contact in Australia for the whole purchase.</p>
+          </details>
           <details>
             <summary>Can you confirm what the European office needs?</summary>
             <p>Yes. European requirements vary by country and by office, so confirming what the receiving office needs is the first thing we do, before any translation starts. The finished set is then prepared to match.</p>
