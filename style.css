@@ -293,3 +293,8 @@ a.place:hover h3{color:var(--blue)}
 .pc-body strong::after{content:" \2197";color:#8fb0e0;font-weight:400}
 .pc-body span{font-size:.92rem;color:var(--dark-text)}
 .portal-cards:has(> .portal-card:nth-child(2):last-child) .pc-photo{aspect-ratio:16/9}
+.btn-light-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-light-ghost:hover{border-color:var(--ink);color:var(--ink)}
+.band-cta{display:flex;flex-wrap:wrap;gap:10px}
+.menu-toggle{min-height:44px}
+.chain .by-us{font-size:.8rem;font-weight:600}
