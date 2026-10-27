@@ -23,6 +23,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://lunadreyer.com.au/power-of-attorney-planner.html">
+<link rel="preconnect" href="https://images.pexels.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -160,12 +161,12 @@
         <fieldset class="country-pick">
           <legend>Where is the property?</legend>
           <div class="cp-grid">
-            <label class="cp"><input type="radio" name="country" value="italy" checked><span class="cp-photo" role="img" aria-label="A family dinner at a long table outdoors in the Italian countryside at sunset" style="--img:url('https://images.pexels.com/photos/30539330/pexels-photo-30539330.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Italy</span></label>
-            <label class="cp"><input type="radio" name="country" value="spain"><span class="cp-photo" role="img" aria-label="A sunny Mediterranean beach and old town on the Spanish coast" style="--img:url('https://images.pexels.com/photos/15138932/pexels-photo-15138932.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Spain</span></label>
-            <label class="cp"><input type="radio" name="country" value="portugal"><span class="cp-photo" role="img" aria-label="Golden cliffs and a turquoise cove on the Algarve coast" style="--img:url('https://images.pexels.com/photos/5943833/pexels-photo-5943833.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Portugal</span></label>
-            <label class="cp"><input type="radio" name="country" value="greece"><span class="cp-photo" role="img" aria-label="Whitewashed houses and blue domes above the Aegean at sunset" style="--img:url('https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Greece</span></label>
-            <label class="cp"><input type="radio" name="country" value="cyprus"><span class="cp-photo" role="img" aria-label="A harbour in Paphos with fishing boats at golden hour" style="--img:url('https://images.pexels.com/photos/36149762/pexels-photo-36149762.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Cyprus</span></label>
-            <label class="cp"><input type="radio" name="country" value="malta"><span class="cp-photo" role="img" aria-label="Honey coloured Valletta and its harbour on a summer evening" style="--img:url('https://images.pexels.com/photos/8909170/pexels-photo-8909170.jpeg?auto=compress&cs=tinysrgb&w=1920')"></span><span class="cp-name">Malta</span></label>
+            <label class="cp"><input type="radio" name="country" value="italy" checked><span class="cp-photo" role="img" aria-label="A family dinner at a long table outdoors in the Italian countryside at sunset" data-lazy-img="https://images.pexels.com/photos/30539330/pexels-photo-30539330.jpeg?auto=compress&cs=tinysrgb&w=600"></span><span class="cp-name">Italy</span></label>
+            <label class="cp"><input type="radio" name="country" value="spain"><span class="cp-photo" role="img" aria-label="A sunny Mediterranean beach and old town on the Spanish coast" data-lazy-img="https://images.pexels.com/photos/15138932/pexels-photo-15138932.jpeg?auto=compress&cs=tinysrgb&w=600"></span><span class="cp-name">Spain</span></label>
+            <label class="cp"><input type="radio" name="country" value="portugal"><span class="cp-photo" role="img" aria-label="Golden cliffs and a turquoise cove on the Algarve coast" data-lazy-img="https://images.pexels.com/photos/5943833/pexels-photo-5943833.jpeg?auto=compress&cs=tinysrgb&w=600"></span><span class="cp-name">Portugal</span></label>
+            <label class="cp"><input type="radio" name="country" value="greece"><span class="cp-photo" role="img" aria-label="Whitewashed houses and blue domes above the Aegean at sunset" data-lazy-img="https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=600"></span><span class="cp-name">Greece</span></label>
+            <label class="cp"><input type="radio" name="country" value="cyprus"><span class="cp-photo" role="img" aria-label="A harbour in Paphos with fishing boats at golden hour" data-lazy-img="https://images.pexels.com/photos/36149762/pexels-photo-36149762.jpeg?auto=compress&cs=tinysrgb&w=600"></span><span class="cp-name">Cyprus</span></label>
+            <label class="cp"><input type="radio" name="country" value="malta"><span class="cp-photo" role="img" aria-label="Honey coloured Valletta and its harbour on a summer evening" data-lazy-img="https://images.pexels.com/photos/8909170/pexels-photo-8909170.jpeg?auto=compress&cs=tinysrgb&w=600"></span><span class="cp-name">Malta</span></label>
           </div>
           <div class="cp-more">
             <label class="cp-chip"><input type="radio" name="country" value="germany"><span>Germany</span></label>
@@ -302,22 +303,22 @@
 (function () {
   var ACCESS_KEY = "f109b614-c5ff-44ee-867f-0df1f5753f38";
   var C = {
-    italy: {name:"Italy", doc:"procura speciale", lang:"Italian", official:"notaio", deed:"the rogito, the deed of sale",
+    italy: {homes:"discover-italy.html#homes", name:"Italy", doc:"procura speciale", lang:"Italian", official:"notaio", deed:"the rogito, the deed of sale",
       asks:["A codice fiscale, the Italian tax code, for the buyer or heir","A valid passport, checked against the details in the procura","For an auction, your lawyer in Italy (avvocato), whether your own or one of our partner lawyers"],
       guide:["buying-property-italy-from-australia.html","Buying property in Italy from Australia"]},
-    spain: {name:"Spain", doc:"poder notarial", lang:"Spanish", official:"notario", deed:"the escritura de compraventa",
+    spain: {homes:"discover-spain.html#homes", name:"Spain", doc:"poder notarial", lang:"Spanish", official:"notario", deed:"the escritura de compraventa",
       asks:["An NIE, the foreigner identity number, for the buyer or heir","A Spanish bank account for the purchase funds and taxes","Registration of the deed at the Registro de la Propiedad","In the Balearic Islands, Carmen, our partner in Mallorca, for the notario, the inspection and the negotiation"],
       guide:["buying-property-spain-from-australia.html","Buying property in Spain from Australia"]},
-    portugal: {name:"Portugal", doc:"procuração", lang:"Portuguese", official:"notário", deed:"the escritura or the Casa Pronta deed",
+    portugal: {homes:"discover-portugal.html#homes", name:"Portugal", doc:"procuração", lang:"Portuguese", official:"notário", deed:"the escritura or the Casa Pronta deed",
       asks:["A NIF, the Portuguese tax number, for the buyer or heir","A Portuguese bank account for the purchase funds and taxes","Registration at the Conservatória do Registo Predial"],
       guide:["buying-property-portugal-from-australia.html","Buying property in Portugal from Australia"]},
-    greece: {name:"Greece", doc:"plirexousio (πληρεξούσιο)", lang:"Greek", official:"Greek notary (symvolaiografos)", deed:"the notarial purchase contract",
+    greece: {homes:"discover-greece.html#homes", name:"Greece", doc:"plirexousio (πληρεξούσιο)", lang:"Greek", official:"Greek notary (symvolaiografos)", deed:"the notarial purchase contract",
       asks:["An AFM, the Greek tax number, for the buyer or heir","A Greek bank account for the purchase funds and taxes","Registration at the Hellenic Cadastre"],
       guide:["power-of-attorney-property-greece.html","Power of attorney for property in Greece"]},
-    cyprus: {name:"Cyprus", doc:"power of attorney (πληρεξούσιο)", lang:"Greek", official:"Cypriot lawyer", deed:"the sale contract, stamped and deposited at the Land Registry",
+    cyprus: {homes:"discover-cyprus.html#homes", name:"Cyprus", doc:"power of attorney (πληρεξούσιο)", lang:"Greek", official:"Cypriot lawyer", deed:"the sale contract, stamped and deposited at the Land Registry",
       asks:["Your lawyer in Cyprus for the contract, whether your own or one of our partner lawyers","A TIC, the Cyprus tax identification code, for the buyer or heir","A Cypriot bank account for the purchase funds","Deposit of the contract at the Department of Lands and Surveys"],
       guide:["discover-cyprus.html","Discover Cyprus"]},
-    malta: {name:"Malta", doc:"prokura", lang:"Maltese or English", official:"Maltese notary (nutar)", deed:"the konvenju (promise of sale) and the final deed",
+    malta: {homes:"discover-malta.html#homes", name:"Malta", doc:"prokura", lang:"Maltese or English", official:"Maltese notary (nutar)", deed:"the konvenju (promise of sale) and the final deed",
       asks:["For buyers from outside the EU, an AIP permit, unless the property is in a Special Designated Area","A Maltese bank account for the purchase funds and taxes","Registration of the deed by the nutar at the Public Registry"],
       guide:["discover-malta.html","Discover Malta"]},
     germany: {name:"Germany", doc:"Vollmacht", lang:"German", official:"Notar", deed:"the notarised purchase contract (Kaufvertrag)",
@@ -367,11 +368,19 @@
     h+='</ol><h3 class="plan-sub">What '+esc(c.name)+' will also ask for</h3><ul class="plan-list">';
     c.asks.forEach(function(a){ h+='<li>'+esc(a)+'</li>'; });
     h+='</ul><div class="cta-row plan-cta"><a class="btn btn-primary" href="#lead">Email me this plan with a fixed quote</a>'+
+      (c.homes?'<a class="btn btn-light-ghost" href="'+c.homes+'">'+(p==="auction"&&k!=="malta"&&k!=="cyprus"?"Browse auctions in ":"Browse homes for sale in ")+esc(c.name)+'</a>':'')+
       '<a class="btn btn-light-ghost" href="'+c.guide[0]+'">'+esc(c.guide[1])+'</a></div>';
     plan.innerHTML=h; plan.hidden=false;
     if (window.gtag) gtag("event","planner_generate",{country:c.name,purpose:p});
   }
   form.addEventListener("submit",function(e){ e.preventDefault(); render(); plan.scrollIntoView({behavior:"smooth",block:"start"}); });
+  try {
+    var q=new URLSearchParams(location.search), qc=(q.get("country")||"").toLowerCase(), qp=(q.get("purpose")||"").toLowerCase();
+    var r=qc && form.querySelector('input[name="country"][value="'+qc.replace(/[^a-z]/g,"")+'"]');
+    if (r) r.checked=true;
+    if (qp && P[qp]) form.purpose.value=qp;
+    if (r) { render(); }
+  } catch(err){}
 
   var lead=document.getElementById("lead-form"), st=document.getElementById("lead-status");
   lead.addEventListener("submit",function(e){
@@ -411,5 +420,6 @@
     });
   })();
 </script>
+<script src="lazy-bg.js" defer></script>
 </body>
 </html>
